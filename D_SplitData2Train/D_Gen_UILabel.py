@@ -1,6 +1,7 @@
 """
     生成UI, UILabel用于评估
 """
+import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
 

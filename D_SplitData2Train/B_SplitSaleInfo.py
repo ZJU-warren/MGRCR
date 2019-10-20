@@ -1,6 +1,7 @@
 """
     按用户分割出训练集和测试集
 """
+import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
 

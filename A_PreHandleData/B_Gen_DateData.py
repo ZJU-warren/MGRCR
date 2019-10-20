@@ -1,6 +1,7 @@
 """
     生成实际所需要用到的时间信息表 dateData
 """
+import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
 

@@ -1,7 +1,7 @@
 """
     训练LR分类器
 """
-from Tools import *
+import sys ;sys.path.append('../')
 from sklearn import metrics
 import F_TrainModel.GenDataTool as GDTool
 import DataLinkSet as DLSet
@@ -11,6 +11,8 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
+import numpy as np
+
 
 # 训练模型
 def TrainHyBrid(gd, npRatio, nt, modelLink_gbdt, modelLink_enc, modelLink_lr):
@@ -63,7 +65,7 @@ def Predict(gd, modelLink_gbdt, modelLink_enc, modelLink_lr, thre=0.5):
     # 预测
     temp = LR_clf.predict_proba(enc.transform(GBDT_clf.apply(judge_X)[:, 0:6, 0]))
 
-    """
+    # 评价
     f1Set = []
     coSet = []
     for co in np.arange(0.01, 1, 0.05):
@@ -71,18 +73,14 @@ def Predict(gd, modelLink_gbdt, modelLink_enc, modelLink_lr, thre=0.5):
         f1 = metrics.f1_score(judge_y, judge_y_pred)
         p = metrics.precision_score(judge_y, judge_y_pred)
         r = metrics.recall_score(judge_y, judge_y_pred)
-        print('co = %.2f' % co, '  f1 = %.4f' % f1)
-        print('Precision =', p)
-        print('Recall =', r)
+        print('co = %.2f' % co, '  f1 = %.4f' % f1, '  Precision = %.4f' % p, '  Recall = %.4f' % r)
 
         f1Set.append(f1)
         coSet.append(co)
-    # 评价
-    ShowPic(coSet, f1Set, "penalty='l1'", 'hybrid: co -> f1', 'co')
 
-    # return judge_y_pred
-    """
-    return temp[:, 1] > thre
+    # ShowPic(coSet, f1Set, "penalty='l1'", 'hybrid: co -> f1', 'co')
+    print('argmax co = %f' % (0.01 + 0.05 * np.argmax(f1Set)))
+    return temp[:, 1] > (0.01 + 0.05 * np.argmax(f1Set))
 
 
 if __name__ == '__main__':

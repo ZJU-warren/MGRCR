@@ -1,6 +1,7 @@
 """
     生成大小为Ｎ的cssales表子集
 """
+import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
 

@@ -1,6 +1,7 @@
 """
     选择LR超参数
 """
+import sys ;sys.path.append('../')
 from Tools import *
 from sklearn import metrics
 from sklearn.linear_model import LogisticRegression
@@ -33,14 +34,19 @@ def Select_NPRatio(gd):
         valid_y_pred = LR_clf.predict(valid_X)
 
         # 评估
-        f1Set.append(metrics.f1_score(valid_y, valid_y_pred))
+        resF1 = metrics.f1_score(valid_y, valid_y_pred)
+        f1Set.append(resF1)
         npSet.append(npRatio)
-
-        print('LR_clf [NP ratio = %d] is fitted' % npRatio)
+        print('-------------------------------------------')
+        print('LR_clf [NP ratio = %d] is fitted, [f1 = %f]' % (npRatio, resF1))
         t2 = time.time()
         print('time used %d s' % (t2 - t1))
 
-    ShowPic(npSet, f1Set, "penalty='l1'", 'LR: npRatio -> f1', 'npRatio')
+    # ShowPic(npSet, f1Set, "penalty='l1'", 'LR: npRatio -> f1', 'npRatio')
+    print('——————START——————')
+    for i in range(len(f1Set)):
+        print('%d\t%f' % (npSet[i], f1Set[i]))
+    print('———————END———————')
 
 
 # 惩罚程度选择
@@ -64,14 +70,19 @@ def Select_Regularization_Strength(gd, npRatio):
         valid_y_pred = LR_clf.predict(valid_X)
 
         # 评估
-        f1Set.append(metrics.f1_score(valid_y, valid_y_pred))
+        resF1 = metrics.f1_score(valid_y, valid_y_pred)
+        f1Set.append(resF1)
         cSet.append(c)
 
-        print('LR_clf [c = %.3f] is fitted' % c)
+        print('LR_clf [c = %.3f] is fitted, [f1 = % f]' % (c, resF1))
         t2 = time.time()
         print('time used %d s' % (t2 - t1))
 
-    ShowPic(cSet, f1Set, "penalty='l1'", 'LR: c -> f1', 'c')
+    # ShowPic(cSet, f1Set, "penalty='l1'", 'LR: c -> f1', 'c')
+    print('——————START——————')
+    for i in range(len(f1Set)):
+        print('%d\t%f' % (cSet[i], f1Set[i]))
+    print('———————END———————')
 
 
 # 阈值选择
@@ -94,14 +105,19 @@ def Select_CutOff(gd, npRatio, c):
         valid_y_pred = (LR_clf.predict_proba(valid_X)[:, 1] > co)
 
         # 评估
-        f1Set.append(metrics.f1_score(valid_y, valid_y_pred))
+        resF1 = metrics.f1_score(valid_y, valid_y_pred)
+        f1Set.append(resF1)
         coSet.append(co)
 
-        print('LR_clf [co = %.3f] is fitted' % co)
+        print('LR_clf [co = %.3f] is fitted, [f1 = % f]' % (co, resF1))
         t2 = time.time()
         print('time used %d s' % (t2 - t1))
 
-    ShowPic(coSet, f1Set, "penalty='l1'", 'LR: co -> f1', 'co')
+    # ShowPic(coSet, f1Set, "penalty='l1'", 'LR: co -> f1', 'co')
+    print('——————START——————')
+    for i in range(len(f1Set)):
+        print('%d\t%f' % (coSet[i], f1Set[i]))
+    print('———————END———————')
 
 
 if __name__ == '__main__':
@@ -117,6 +133,6 @@ if __name__ == '__main__':
         DLSet.feature_I_judge_link,
         DLSet.feature_UI_judge_link,
     )
-    # Select_NPRatio(gd)
+    Select_NPRatio(gd)
     # Select_Regularization_Strength(gd, 15)
-    Select_CutOff(gd, 15, 50)
+    # Select_CutOff(gd, 15, 50)

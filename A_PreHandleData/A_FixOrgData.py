@@ -1,6 +1,7 @@
 """
     对原有表的sep处理，并加入表头
 """
+import sys ;sys.path.append('../')
 import pandas as pd
 import DataLinkSet as DLSet
 

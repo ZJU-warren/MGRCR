@@ -1,8 +1,10 @@
 """
     将正负样本比调整为 1:NP_RATIO
 """
+import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
+
 
 # 取适当样本比
 def Gen_SubData(dfOrg):

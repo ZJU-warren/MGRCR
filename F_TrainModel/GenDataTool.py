@@ -1,6 +1,7 @@
 """
     负样本下利用Scaler规范化, 并kmeans++聚类便于下采样
 """
+import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
 import pickle
@@ -36,7 +37,7 @@ class GenDataTool:
         orgSize = df.shape[0]
         df = pd.merge(df, self.__dfT_U, on=['userID'], how='left').fillna(0)
         df = pd.merge(df, self.__dfT_I, on=['itemID'], how='left').fillna(0)
-        df = pd.merge(df, self.__dfT_UI, on=['userID', 'itemID'], how='left').fillna(0)
+        # df = pd.merge(df, self.__dfT_UI, on=['userID', 'itemID'], how='left').fillna(0)
         if orgSize != df.shape[0]:
             print('------ ! -------')
 
@@ -51,7 +52,6 @@ class GenDataTool:
 
         return std_X, y
 
-
     # 给定所需要比率，生成评判数据
     def Gen_JudgeData(self, subRatio=1):
         # 样本抽取
@@ -65,7 +65,7 @@ class GenDataTool:
         orgSize = df.shape[0]
         df = pd.merge(df, self.__dfJ_U, on=['userID'], how='left').fillna(0)
         df = pd.merge(df, self.__dfJ_I, on=['itemID'], how='left').fillna(0)
-        df = pd.merge(df, self.__dfJ_UI, on=['userID', 'itemID'], how='left').fillna(0)
+        # df = pd.merge(df, self.__dfJ_UI, on=['userID', 'itemID'], how='left').fillna(0)
         if orgSize != df.shape[0]:
             print('------ * -------')
 
@@ -80,14 +80,12 @@ class GenDataTool:
 
         return std_X, y
 
+    # 生成结果
     def Gen_Res(self, v, storeLink):
-        # print(type(v))
         v = pd.DataFrame(v, columns=['pred'])
         dfRes = pd.concat([self.__J, v], axis=1)
         dfRes['label'] = dfRes['label'] == 1
-        # print(dfRes[dfRes['pred'] == False])
         dfRes.to_csv(storeLink, header=None, index=False)
-
 
 
 if __name__ == '__main__':

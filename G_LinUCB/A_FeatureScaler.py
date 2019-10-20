@@ -1,6 +1,7 @@
 """
     特征归一化
 """
+import sys ;sys.path.append('../')
 import DataLinkSet as DLSet
 from sklearn import preprocessing
 from Tools import *

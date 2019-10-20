@@ -2,6 +2,7 @@
     切割出学习部分和预测部分
     预设前300天学习，预测后66天情况
 """
+import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
 

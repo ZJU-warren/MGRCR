@@ -1,6 +1,7 @@
 """
     求热门销量商品
 """
+import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
 

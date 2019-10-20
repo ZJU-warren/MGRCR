@@ -1,13 +1,15 @@
 """
     训练LR分类器
 """
-from Tools import *
+import sys ;sys.path.append('../')
 from sklearn import metrics
 import F_TrainModel.GenDataTool as GDTool
 import DataLinkSet as DLSet
 import joblib
 import time
 from sklearn.ensemble import GradientBoostingClassifier
+import numpy as np
+
 
 # 训练模型
 def TrainGBDT(gd, npRatio, nt, modelLink):
@@ -42,7 +44,6 @@ def Predict(gd, modelLink, thre=0.5):
     temp = GBDT_clf.predict_proba(judge_X)
 
     # 评价
-    """
     f1Set = []
     coSet = []
     for co in np.arange(0.01, 1, 0.05):
@@ -50,16 +51,14 @@ def Predict(gd, modelLink, thre=0.5):
         f1 = metrics.f1_score(judge_y, judge_y_pred)
         p = metrics.precision_score(judge_y, judge_y_pred)
         r = metrics.recall_score(judge_y, judge_y_pred)
-        print('co = %.2f' % co, '  f1 = %.4f' % f1)
-        print('Precision =', p)
-        print('Recall =', r)
+        print('co = %.2f' % co, '  f1 = %.4f' % f1, '  Precision = %.4f' % p, '  Recall = %.4f' % r)
+
         f1Set.append(f1)
         coSet.append(co)
 
-    ShowPic(coSet, f1Set, "penalty='l1'", 'GBDT: co -> f1', 'co')
-    """
-
-    return temp[:, 1] > thre
+    # ShowPic(coSet, f1Set, "penalty='l1'", 'hybrid: co -> f1', 'co')
+    print('argmax co = %f' % (0.01 + 0.05 * np.argmax(f1Set)))
+    return temp[:, 1] > (0.01 + 0.05 * np.argmax(f1Set))
 
 
 if __name__ == '__main__':
@@ -75,7 +74,7 @@ if __name__ == '__main__':
         DLSet.feature_I_judge_link,
         DLSet.feature_UI_judge_link,
     )
-    # TrainGBDT(gd, 15, 400, DLSet.classifier_GBDT_link)
+    TrainGBDT(gd, 15, 400, DLSet.classifier_GBDT_link)
     res = Predict(gd, DLSet.classifier_GBDT_link)
 
     gd.Gen_Res(res, DLSet.resGBDT_link)

@@ -1,9 +1,9 @@
 """
     选择GBDT超参数
 """
+import sys ;sys.path.append('../')
 from Tools import *
 from sklearn import metrics
-import matplotlib.pyplot as plt
 import time
 import F_TrainModel.GenDataTool as GDTool
 import DataLinkSet as DLSet
@@ -38,14 +38,19 @@ def Select_NPRatio(gd):
         valid_y_pred = GBDT_clf.predict(valid_X)
 
         # 评估
-        f1Set.append(metrics.f1_score(valid_y, valid_y_pred))
+        resF1 = metrics.f1_score(valid_y, valid_y_pred)
+        f1Set.append(resF1)
         npSet.append(npRatio)
 
-        print('GBDT_clf [NP ratio = %d] is fitted' % npRatio)
+        print('GBDT_clf [NP ratio = %d] is fitted, [f1 = %f]' % (npRatio, resF1))
         t2 = time.time()
         print('time used %d s' % (t2 - t1))
 
-    ShowPic(npSet, f1Set, "penalty='l1'", 'GBDT: npRatio -> f1', 'npRatio')
+    # ShowPic(npSet, f1Set, "penalty='l1'", 'GBDT: npRatio -> f1', 'npRatio')
+    print('——————START——————')
+    for i in range(len(f1Set)):
+        print('%d\t%f' % (npSet[i], f1Set[i]))
+    print('———————END———————')
 
 
 # 树的数目选择
@@ -74,14 +79,19 @@ def Select_nEstimators_as_LearningRate_0d05(gd, npRatio):
         valid_y_pred = GBDT_clf.predict(valid_X)
 
         # 评估
-        f1Set.append(metrics.f1_score(valid_y, valid_y_pred))
+        resF1 = metrics.f1_score(valid_y, valid_y_pred)
+        f1Set.append(resF1)
         ntSet.append(nt)
 
-        print('GBDT_clf [nt = %d] is fitted' % nt)
+        print('GBDT_clf [nt = %d] is fitted, [f1 = % f]' % (nt, resF1))
         t2 = time.time()
         print('time used %d s' % (t2 - t1))
 
-    ShowPic(ntSet, f1Set, "penalty='l1'", 'GBDT: nt -> f1', 'nt')
+    # ShowPic(ntSet, f1Set, "penalty='l1'", 'GBDT: nt -> f1', 'nt')
+    print('——————START——————')
+    for i in range(len(f1Set)):
+        print('%d\t%f' % (ntSet[i], f1Set[i]))
+    print('———————END———————')
 
 
 # 阈值选择
@@ -108,14 +118,19 @@ def Select_CutOff(gd, npRatio, nt):
         valid_y_pred = (GBDT_clf.predict_proba(valid_X)[:, 1] > co)
 
         # 评估
-        f1Set.append(metrics.f1_score(valid_y, valid_y_pred))
+        resF1 = metrics.f1_score(valid_y, valid_y_pred)
+        f1Set.append(resF1)
         coSet.append(co)
 
-        print('GBDT_clf [co = %.3f] is fitted' % co)
+        print('GBDT_clf [co = %.3f] is fitted, [f1 = % f]' % (co, resF1))
         t2 = time.time()
         print('time used %d s' % (t2 - t1))
 
-    ShowPic(coSet, f1Set, "penalty='l1'", 'GBDT: co -> f1', 'co')
+    # ShowPic(coSet, f1Set, "penalty='l1'", 'GBDT: co -> f1', 'co')
+    print('——————START——————')
+    for i in range(len(f1Set)):
+        print('%d\t%f' % (coSet[i], f1Set[i]))
+    print('———————END———————')
 
 
 if __name__ == '__main__':
@@ -134,4 +149,3 @@ if __name__ == '__main__':
     # Select_NPRatio(gd)
     # Select_nEstimators_as_LearningRate_0d05(gd, 15)
     # Select_CutOff(gd, 15, 300)
-    Select_CutOff(gd, 15, 400)

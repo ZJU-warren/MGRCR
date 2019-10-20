@@ -1,7 +1,7 @@
 """
     构建UI的交互特征, 并生成UI&U, UI&I特征
 """
-
+import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
 

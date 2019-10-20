@@ -1,11 +1,13 @@
 """
     负样本下利用Scaler规范化, 并kmeans++聚类便于下采样
 """
+import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
 from sklearn import preprocessing
 from sklearn.cluster import MiniBatchKMeans
 import pickle
+
 
 # 分别存储label = 0 和 label = 1的数据
 def Split_y(dataLink, storeLink_L0, storeLink_L1):
@@ -44,7 +46,7 @@ def StandardScale(dataLink, dfU, dfI, dfUI):
             orgSize = df.shape[0]
             df = pd.merge(df, dfU, on=['userID'], how='left').fillna(0)
             df = pd.merge(df, dfI, on=['itemID'], how='left').fillna(0)
-            df = pd.merge(df, dfUI, on=['userID', 'itemID'], how='left').fillna(0)
+            # df = pd.merge(df, dfUI, on=['userID', 'itemID'], how='left').fillna(0)
             if orgSize != df.shape[0]:
                 print('------ ! -------')
             df = df.drop(columns=['userID', 'itemID', 'label'])
@@ -74,7 +76,7 @@ def Cluster(dataLink, dfU, dfI, dfUI, scaler):
             orgSize = df.shape[0]
             df = pd.merge(df, dfU, on=['userID'], how='left').fillna(0)
             df = pd.merge(df, dfI, on=['itemID'], how='left').fillna(0)
-            df = pd.merge(df, dfUI, on=['userID', 'itemID'], how='left').fillna(0)
+            # df = pd.merge(df, dfUI, on=['userID', 'itemID'], how='left').fillna(0)
             if orgSize != df.shape[0]:
                 print('------ ! -------')
             df = df.drop(columns=['userID', 'itemID', 'label'])

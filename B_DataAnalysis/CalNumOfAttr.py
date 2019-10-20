@@ -1,6 +1,7 @@
 """
     计算给定关键字在指定表中出现次数
 """
+import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
 

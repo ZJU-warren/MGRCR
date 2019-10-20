@@ -1,6 +1,7 @@
 """
     生成itemInfo表
 """
+import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
 

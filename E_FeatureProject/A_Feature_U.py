@@ -1,7 +1,7 @@
 """
     构建U的交互特征，并与其标签特征合并
 """
-
+import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
 

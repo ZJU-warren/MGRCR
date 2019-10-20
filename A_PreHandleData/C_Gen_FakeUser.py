@@ -2,6 +2,7 @@
     生成虚假用户
     判定条件： 一年里有15天及以上结算超过7次，判定为虚假用户
 """
+import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
 
