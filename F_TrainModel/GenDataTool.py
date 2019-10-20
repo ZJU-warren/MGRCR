@@ -5,6 +5,8 @@ import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
 import pickle
+from sklearn import metrics
+
 
 class GenDataTool:
     def __init__(self, Tlink, T_Ulink, T_Ilink, T_UIlink, ScalerLink,
@@ -82,9 +84,17 @@ class GenDataTool:
 
     # 生成结果
     def Gen_Res(self, v, storeLink):
+
         v = pd.DataFrame(v, columns=['pred'])
         dfRes = pd.concat([self.__J, v], axis=1)
-        dfRes['label'] = dfRes['label'] == 1
+
+        # dfRes['pred'] = 0 if dfRes['pred'] is 'False' else 1
+
+        dfRes['pred'] = dfRes['pred'].astype('int')
+        f1 = metrics.f1_score(dfRes['label'].values, dfRes['pred'].values)
+        p = metrics.precision_score(dfRes['label'].values, dfRes['pred'].values)
+        r = metrics.recall_score(dfRes['label'].values, dfRes['pred'].values)
+        print('f1 = %.4f' % f1, '  Precision = %.4f' % p, '  Recall = %.4f' % r)
         dfRes.to_csv(storeLink, header=None, index=False)
 
 

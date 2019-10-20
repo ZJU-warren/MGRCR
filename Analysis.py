@@ -9,21 +9,17 @@ def GetData(dataLink):
 
 
 # 处理一行数据
-def ExChange(line):
+def ExcSupervised(line):
     total = line.split(",")
     # 得到用户
     user = int(total[0])
 
     # 获取真实结果
     y = [int(total[1])]
+    flagT = int(total[2])
+    flagP = int(total[3])
 
-    flagT = total[2] == 'True'
-    flagP = total[3] == 'True'
-
-    flag = flagT | flagP
-    pred = y if flagP is True else [-1]
-
-    return flag, user, y, pred
+    return user, y, flagT, flagP
 
 
 # 评价类
@@ -38,35 +34,34 @@ class Performance:
     N = 0           # 推荐轮数
 
     # 更新
-    def Update(self, u, y, pred):
+    def Update(self, u, y, flagT, flagP):
         self.N += 1
-        for each in pred:
-            if each in y:
-                self.TP += 1
-            else:
-                self.FP += 1
-
-        for each in y:
-            if each not in pred:
-                self.FN += 1
+        if flagT == 1:
+            self.TP += flagP        # True Positive  : 被判定为正样本，事实上也是正样本
+            self.FN += 1 - flagP    # False Negative : 被判定为负样本，但事实上是正样本
+        else:
+            self.FP += flagP        # False Positive : 被判定为正样本，事实上是负样本
+            self.TN += 1 - flagP    # True Negative  : 被判定为负样本，事实上也是负样本
 
         if u not in self.history:
             self.history[u] = [-1]
 
-        stale = 0
-        fresh = 0
-        for each in pred:
-            if each not in y and each in self.history[u]:
-                stale += 1
-            elif each in y and each not in self.history[u]:
-                fresh += 0.3
-        self.novSum_d[0] += (fresh - 0.1 * stale)   # / len(pred)
-        self.novSum_d[1] += (fresh - 0.2 * stale)   # / len(pred)
-        self.novSum_d[2] += (fresh - 0.3 * stale)   # / len(pred)
+        if flagT == 1 and flagP == 1:
+            stale = 0
+            fresh = 0
+            for each in y:
+                if each not in y and each in self.history[u]:
+                    stale += 1
+                elif each in y and each not in self.history[u]:
+                    fresh += 0.3
+            self.novSum_d[0] += (fresh - 0.1 * stale)   # / len(pred)
+            self.novSum_d[1] += (fresh - 0.2 * stale)   # / len(pred)
+            self.novSum_d[2] += (fresh - 0.3 * stale)   # / len(pred)
 
-        for each in y:
-            if each not in self.history[u]:
-                self.history[u].append(each)
+            for each in y:
+                if each not in self.history[u]:
+                    self.history[u].append(each)
+
 
     def getPrecision(self):
         return self.TP / (self.TP + self.FP)
@@ -87,9 +82,8 @@ def Main(dataLink):
     data = GetData(dataLink)
     obj = Performance()
     for each in data:
-        flag, user, y, pred = ExChange(each[:-1])
-        if flag is True:
-            obj.Update(user, y, pred)
+        user, y, flagT, flagP = ExcSupervised(each[:-1])
+        obj.Update(user, y, flagT, flagP)
 
     print('Precision =', obj.getPrecision())
     print('Recall =', obj.getRecall())
@@ -100,7 +94,12 @@ def Main(dataLink):
 
 
 def Run():
-    Main(DLSet.resLRGBDT_link)
+    print('--------------------------------')
+    Main(DLSet.resLR_link[1:])
+    print('--------------------------------')
+    Main(DLSet.resGBDT_link[1:])
+    print('--------------------------------')
+    Main(DLSet.resLRGBDT_link[1:])
 
 
 if __name__ == '__main__':

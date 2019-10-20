@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1dfbe97f-d8fe-4bbc-82da-3c92ae650740" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataLinkSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataLinkSet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/F_TrainModel/D1_model_LR.py" beforeDir="false" afterPath="$PROJECT_DIR$/F_TrainModel/D1_model_LR.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/F_TrainModel/D2_model_GBDT.py" beforeDir="false" afterPath="$PROJECT_DIR$/F_TrainModel/D2_model_GBDT.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/F_TrainModel/D3_Hybrid_LR_GBDT.py" beforeDir="false" afterPath="$PROJECT_DIR$/F_TrainModel/D3_Hybrid_LR_GBDT.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/F_TrainModel/GenDataTool.py" beforeDir="false" afterPath="$PROJECT_DIR$/F_TrainModel/GenDataTool.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,107 +14,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/G_LinUCB/A_FeatureScaler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#0#17#1" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="93" column="37" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+            <state relative-caret-position="311">
+              <caret line="74" column="34" lean-forward="true" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
               <folding>
-                <element signature="e#49#134#0" />
-                <element signature="e#454#712#0" />
-                <element signature="e#741#2446#0" />
-                <element signature="e#1008#1894#0" />
-                <element signature="e#1066#1155#0" />
-                <element signature="e#1192#1241#0" />
-                <element signature="e#1422#1647#0" />
-                <element signature="e#1818#1894#0" />
-                <element signature="e#2150#2186#0" />
-                <element signature="e#2221#2257#0" />
-                <element signature="e#2288#2375#0" />
-                <element signature="e#2411#2446#0" />
-                <element signature="e#2968#2992#0" />
+                <element signature="e#66#136#0" />
+                <element signature="e#1727#1763#0" />
+                <element signature="e#1798#1834#0" />
+                <element signature="e#1865#1952#0" />
+                <element signature="e#1988#2023#0" />
+                <element signature="e#2496#2728#0" />
+                <element signature="e#2711#2808#0" />
+                <element signature="e#2721#2745#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/F_TrainModel/D2_model_GBDT.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="76" column="6" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#19#1" />
-                <element signature="e#310#865#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/F_TrainModel/D1_model_LR.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="73" column="6" selection-start-line="73" selection-start-column="6" selection-end-line="73" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#19#1" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/F_TrainModel/D3_Hybrid_LR_GBDT.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="91" column="36" lean-forward="true" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
+            <state relative-caret-position="76">
+              <caret line="77" column="24" lean-forward="true" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
               <folding>
                 <element signature="e#0#19#1" />
                 <element signature="e#499#1795#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/F_TrainModel/GenDataTool.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
-              <folding>
-                <element signature="e#0#45#1" />
-                <element signature="e#167#2936#0" />
-                <element signature="e#294#696#0" />
-                <element signature="e#811#1795#0" />
-                <element signature="e#1067#1172#0" />
-                <element signature="e#1547#1557#0" />
-                <element signature="e#1867#2689#0" />
-                <element signature="e#1867#1873#0" />
-                <element signature="e#2450#2460#0" />
-                <element signature="e#2747#2936#0" />
-                <element signature="e#2970#3455#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataLinkSet.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
             </state>
           </provider>
         </entry>
@@ -152,13 +77,13 @@
         <option value="$PROJECT_DIR$/Tools.py" />
         <option value="$PROJECT_DIR$/F_TrainModel/C1_selectParameter_LR.py" />
         <option value="$PROJECT_DIR$/F_TrainModel/C2_selectParameter_GBDT.py" />
-        <option value="$PROJECT_DIR$/F_TrainModel/GenDataTool.py" />
         <option value="$PROJECT_DIR$/G_LinUCB/A_FeatureScaler.py" />
-        <option value="$PROJECT_DIR$/Analysis.py" />
         <option value="$PROJECT_DIR$/DataLinkSet.py" />
-        <option value="$PROJECT_DIR$/F_TrainModel/D2_model_GBDT.py" />
         <option value="$PROJECT_DIR$/F_TrainModel/D1_model_LR.py" />
         <option value="$PROJECT_DIR$/F_TrainModel/D3_Hybrid_LR_GBDT.py" />
+        <option value="$PROJECT_DIR$/F_TrainModel/D2_model_GBDT.py" />
+        <option value="$PROJECT_DIR$/F_TrainModel/GenDataTool.py" />
+        <option value="$PROJECT_DIR$/Analysis.py" />
       </list>
     </option>
   </component>
@@ -231,7 +156,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.D3_Hybrid_LR_GBDT">
+  <component name="RunManager" selected="Python.Analysis">
     <configuration name="Analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -246,28 +171,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Analysis.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="C2_selectParameter_GBDT" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/F_TrainModel" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/F_TrainModel/C2_selectParameter_GBDT.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -342,13 +245,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="GenDataTool" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/F_TrainModel" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/F_TrainModel/GenDataTool.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Analysis" />
         <item itemvalue="Python.D3_Hybrid_LR_GBDT" />
         <item itemvalue="Python.D1_model_LR" />
         <item itemvalue="Python.D2_model_GBDT" />
-        <item itemvalue="Python.Analysis" />
-        <item itemvalue="Python.C2_selectParameter_GBDT" />
+        <item itemvalue="Python.GenDataTool" />
       </list>
     </recent_temporary>
   </component>
@@ -362,12 +287,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571553826111</updated>
-      <workItem from="1571553827935" duration="4113000" />
+      <workItem from="1571553827935" duration="8095000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4113000" />
+    <option name="totallyTimeSpent" value="8095000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -382,12 +307,12 @@
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24958494" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.24958494" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32289416" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3423326" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32937366" />
       <window_info anchor="bottom" id="Python Console" order="4" weight="0.32937366" />
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.5680345" />
@@ -398,26 +323,52 @@
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32937366" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="R Packages" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="R Graphics" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="0" />
+      <window_info anchor="right" id="R Packages" order="1" />
+      <window_info anchor="right" id="SciView" order="2" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.24958494" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3423326" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32937366" />
+      <window_info anchor="bottom" id="Python Console" order="4" weight="0.32937366" />
+      <window_info anchor="bottom" id="Terminal" order="5" weight="0.5680345" />
+      <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.39956802" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.32937366" />
+      <window_info anchor="right" id="R Graphics" order="0" />
+      <window_info anchor="right" id="R Packages" order="1" />
+      <window_info anchor="right" id="SciView" order="2" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Project$D2_model_GBDT.coverage" NAME="D2_model_GBDT Coverage Results" MODIFIED="1571557877019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
-    <SUITE FILE_PATH="coverage/Project$D3_Hybrid_LR_GBDT.coverage" NAME="D3_Hybrid_LR_GBDT Coverage Results" MODIFIED="1571557888538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
-    <SUITE FILE_PATH="coverage/Project$Analysis.coverage" NAME="Analysis Coverage Results" MODIFIED="1571557684576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Project$D2_model_GBDT.coverage" NAME="D2_model_GBDT Coverage Results" MODIFIED="1571560294003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
+    <SUITE FILE_PATH="coverage/Project$D3_Hybrid_LR_GBDT.coverage" NAME="D3_Hybrid_LR_GBDT Coverage Results" MODIFIED="1571560332888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
+    <SUITE FILE_PATH="coverage/Project$Analysis.coverage" NAME="Analysis Coverage Results" MODIFIED="1571561928742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project$A_DataScaler.coverage" NAME="A_DataScaler Coverage Results" MODIFIED="1571554032556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
     <SUITE FILE_PATH="coverage/Project$C2_selectParameter_GBDT.coverage" NAME="C2_selectParameter_GBDT Coverage Results" MODIFIED="1571555121166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
+    <SUITE FILE_PATH="coverage/Project$GenDataTool.coverage" NAME="GenDataTool Coverage Results" MODIFIED="1571560069081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
     <SUITE FILE_PATH="coverage/Project$C1_selectParameter_LR.coverage" NAME="C1_selectParameter_LR Coverage Results" MODIFIED="1571555029073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
-    <SUITE FILE_PATH="coverage/Project$D1_model_LR.coverage" NAME="D1_model_LR Coverage Results" MODIFIED="1571557884353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
+    <SUITE FILE_PATH="coverage/Project$D1_model_LR.coverage" NAME="D1_model_LR Coverage Results" MODIFIED="1571560307309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/A_PreHandleData/A_FixOrgData.py">
@@ -745,83 +696,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="93" column="37" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
-          <folding>
-            <element signature="e#49#134#0" />
-            <element signature="e#454#712#0" />
-            <element signature="e#741#2446#0" />
-            <element signature="e#1008#1894#0" />
-            <element signature="e#1066#1155#0" />
-            <element signature="e#1192#1241#0" />
-            <element signature="e#1422#1647#0" />
-            <element signature="e#1818#1894#0" />
-            <element signature="e#2150#2186#0" />
-            <element signature="e#2221#2257#0" />
-            <element signature="e#2288#2375#0" />
-            <element signature="e#2411#2446#0" />
-            <element signature="e#2968#2992#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataLinkSet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="2646">
           <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/F_TrainModel/GenDataTool.py">
+    <entry file="file://$PROJECT_DIR$/F_TrainModel/D1_model_LR.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+        <state relative-caret-position="173">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
           <folding>
-            <element signature="e#0#45#1" />
-            <element signature="e#167#2936#0" />
-            <element signature="e#294#696#0" />
-            <element signature="e#811#1795#0" />
-            <element signature="e#1067#1172#0" />
-            <element signature="e#1547#1557#0" />
-            <element signature="e#1867#2689#0" />
-            <element signature="e#1867#1873#0" />
-            <element signature="e#2450#2460#0" />
-            <element signature="e#2747#2936#0" />
-            <element signature="e#2970#3455#0" />
+            <element signature="e#0#19#1" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/F_TrainModel/D2_model_GBDT.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="76" column="6" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="6" />
+        <state relative-caret-position="63">
+          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
           <folding>
             <element signature="e#0#19#1" />
             <element signature="e#310#865#0" />
+            <element signature="e#917#1708#0" />
+            <element signature="e#1165#1517#0" />
+            <element signature="e#1742#2273#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/F_TrainModel/D1_model_LR.py">
+    <entry file="file://$PROJECT_DIR$/F_TrainModel/GenDataTool.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="73" column="6" selection-start-line="73" selection-start-column="6" selection-end-line="73" selection-end-column="6" />
+        <state relative-caret-position="277">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
           <folding>
-            <element signature="e#0#19#1" />
+            <element signature="e#0#45#1" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/F_TrainModel/D3_Hybrid_LR_GBDT.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="91" column="36" lean-forward="true" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
+        <state relative-caret-position="76">
+          <caret line="77" column="24" lean-forward="true" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
           <folding>
             <element signature="e#0#19#1" />
             <element signature="e#499#1795#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="74" column="34" lean-forward="true" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
+          <folding>
+            <element signature="e#66#136#0" />
+            <element signature="e#1727#1763#0" />
+            <element signature="e#1798#1834#0" />
+            <element signature="e#1865#1952#0" />
+            <element signature="e#1988#2023#0" />
+            <element signature="e#2496#2728#0" />
+            <element signature="e#2711#2808#0" />
+            <element signature="e#2721#2745#0" />
           </folding>
         </state>
       </provider>

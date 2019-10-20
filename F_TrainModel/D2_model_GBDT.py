@@ -2,13 +2,13 @@
     训练LR分类器
 """
 import sys ;sys.path.append('../')
-from sklearn import metrics
 import F_TrainModel.GenDataTool as GDTool
 import DataLinkSet as DLSet
 import joblib
 import time
 from sklearn.ensemble import GradientBoostingClassifier
 import numpy as np
+from sklearn import metrics
 
 
 # 训练模型
