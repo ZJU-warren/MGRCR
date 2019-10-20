@@ -1,33 +1,14 @@
 import DataLinkSet as DLSet
 
 
-def GetData():
-    f = open(DLSet.resLRGBDT_link)
-    data = f.readlines()
-    f.close()
+# 读取所有数据
+def GetData(dataLink):
+    with open(dataLink) as f:
+        data = f.readlines()
     return data
 
 
-"""
-def ExChange(line):
-    total = line.split("][")
-
-    # 得到用户
-    user = int(total[0][1:])
-
-    # 获取真实结果
-    y = total[1].split(',')
-    y = [int(each) for each in y]
-
-    # 获取推荐结果
-    pred = total[2][:-1].split(',')
-    pred = [int(each) for each in pred]
-
-    return user, y, pred
-"""
-
-
-
+# 处理一行数据
 def ExChange(line):
     total = line.split(",")
     # 得到用户
@@ -45,8 +26,8 @@ def ExChange(line):
     return flag, user, y, pred
 
 
-
-class Performance():
+# 评价类
+class Performance:
     TP = 0          # true positive
     FP = 0          # false positive
     FN = 0          # false negative
@@ -56,6 +37,7 @@ class Performance():
     history = {}    # 历史
     N = 0           # 推荐轮数
 
+    # 更新
     def Update(self, u, y, pred):
         self.N += 1
         for each in pred:
@@ -71,26 +53,20 @@ class Performance():
         if u not in self.history:
             self.history[u] = [-1]
 
-        # print(self.TP, self.FP, self.FN)
         stale = 0
         fresh = 0
         for each in pred:
             if each not in y and each in self.history[u]:
                 stale += 1
-                # if each not in y and each in self.history[u]:
             elif each in y and each not in self.history[u]:
                 fresh += 0.3
-                # print('[---]')
-        # print('f, s', fresh, stale)
         self.novSum_d[0] += (fresh - 0.1 * stale)   # / len(pred)
         self.novSum_d[1] += (fresh - 0.2 * stale)   # / len(pred)
         self.novSum_d[2] += (fresh - 0.3 * stale)   # / len(pred)
-        # print(self.novSum_d[0])
+
         for each in y:
             if each not in self.history[u]:
                 self.history[u].append(each)
-                # print(self.history[u])
-
 
     def getPrecision(self):
         return self.TP / (self.TP + self.FP)
@@ -107,13 +83,12 @@ class Performance():
         return self.novSum_d[id-1] / self.N
 
 
-def Main():
-    data = GetData()
+def Main(dataLink):
+    data = GetData(dataLink)
     obj = Performance()
     for each in data:
         flag, user, y, pred = ExChange(each[:-1])
         if flag is True:
-            # print(flag, user, y, pred)
             obj.Update(user, y, pred)
 
     print('Precision =', obj.getPrecision())
@@ -124,8 +99,12 @@ def Main():
     print('Novelty@0.3 =', obj.getNov(3))
 
 
+def Run():
+    Main(DLSet.resLRGBDT_link)
+
+
 if __name__ == '__main__':
-    Main()
+    Run()
     # p = 0.2700787401574803
     # r = 0.13165266106442577
     # print(2 * p * r / (p + r))

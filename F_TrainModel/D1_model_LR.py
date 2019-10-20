@@ -71,6 +71,6 @@ if __name__ == '__main__':
         DLSet.feature_I_judge_link,
         DLSet.feature_UI_judge_link,
     )
-    TrainLR(gd, 15, 50, DLSet.classifier_LR_link)
+    # TrainLR(gd, 15, 50, DLSet.classifier_LR_link)
     res = Predict(gd, DLSet.classifier_LR_link, 0.6)
     gd.Gen_Res(res, DLSet.resLR_link)

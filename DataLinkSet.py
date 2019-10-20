@@ -8,6 +8,7 @@ MapSetLink = DataSetLink + '/MapSet'        # 映射数据仓库地址
 FeatureSetLink = DataSetLink + '/FeatureSet'    # 特征数据仓库地址
 TrainModelSetLink = DataSetLink + '/TrainModel'    # 模型训练数据仓库地址
 LinUCBSetLink = DataSetLink + '/LinUCB'     # LinUCB仓库地址
+ResSetLink = DataSetLink + '/ResSet'     # LinUCB仓库地址
 
 # """ -------------------------------------------- 原始数据地址 -------------------------------------------- """
 # 原始数据
@@ -118,10 +119,11 @@ sub_new_cssales_link = SubSetLink + '/sub_new_cssales'
 sub_fakeUser_link = SubSetLink + '/sub_fakeUser'
 sub_true_cssales_link = SubSetLink + '/sub_true_cssales'
 
-resLinUCB_link = SubSetLink + '/resLinUCB_%d'
-resLR_link = SubSetLink + '/resLR_%d'
-resGBDT_link = SubSetLink + '/resGBDT_%d'
-resLRGBDT_link = SubSetLink + '/resLRGBDT_%d'
+""" -------------------------------------------- 结果集合数据 -------------------------------------------- """
+resLinUCB_link = ResSetLink + '/resLinUCB'
+resLR_link = ResSetLink + '/resLR'
+resGBDT_link = ResSetLink + '/resGBDT'
+resLRGBDT_link = ResSetLink + '/resLRGBDT'
 
 
 # """ -------------------------------------------- LinUCB数据 -------------------------------------------- """
