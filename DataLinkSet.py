@@ -120,7 +120,7 @@ sub_fakeUser_link = SubSetLink + '/sub_fakeUser'
 sub_true_cssales_link = SubSetLink + '/sub_true_cssales'
 
 """ -------------------------------------------- 结果集合数据 -------------------------------------------- """
-resLinUCB_link = ResSetLink + '/resLinUCB'
+resLinUCB_link = ResSetLink + '/resLinUCB_%d'
 resLR_link = ResSetLink + '/resLR'
 resGBDT_link = ResSetLink + '/resGBDT'
 resLRGBDT_link = ResSetLink + '/resLRGBDT'

@@ -34,13 +34,13 @@ def TrainHyBrid(gd, npRatio, nt, modelLink_gbdt, modelLink_enc, modelLink_lr):
 
     # S2. 训练编码器
     enc = OneHotEncoder(categories='auto')
-    enc.fit(GBDT_clf.apply(train_X_gbdt)[:, 0:6, 0])
+    enc.fit(GBDT_clf.apply(train_X_gbdt)[:, :, 0])
     # enc.fit(GBDT_clf.apply(train_X_gbdt)[:, :, 0])
     print('enc has trained')
 
     # S3. 训练LR分类器
     LR_clf = LogisticRegression(solver='saga', max_iter=2000, penalty='l1', n_jobs=-1)
-    LR_clf.fit(enc.transform(GBDT_clf.apply(train_X_lr)[:, 0:6, 0]), train_y_lr)
+    LR_clf.fit(enc.transform(GBDT_clf.apply(train_X_lr)[:, :, 0]), train_y_lr)
     # LR_clf.fit(enc.transform(GBDT_clf.apply(train_X_lr)[:, :, 0]), train_y_lr)
     print('lr has trained')
 
@@ -63,7 +63,7 @@ def Predict(gd, modelLink_gbdt, modelLink_enc, modelLink_lr, thre=0.5):
     # 测试集
     judge_X, judge_y = gd.Gen_JudgeData(subRatio=1)
     # 预测
-    temp = LR_clf.predict_proba(enc.transform(GBDT_clf.apply(judge_X)[:, 0:6, 0]))
+    temp = LR_clf.predict_proba(enc.transform(GBDT_clf.apply(judge_X)[:, :, 0]))
 
     # 评价
     f1Set = []
@@ -97,14 +97,14 @@ if __name__ == '__main__':
         DLSet.feature_UI_judge_link,
     )
 
-    # TrainHyBrid(gd, 15, 400,
-    #             DLSet.hybrid_classifier_GBDT_link,
-    #             DLSet.hybrid_classifier_ENC_link,
-    #             DLSet.hybrid_classifier_LR_link)
+    TrainHyBrid(gd, 15, 400,
+                DLSet.hybrid_classifier_GBDT_link,
+                DLSet.hybrid_classifier_ENC_link,
+                DLSet.hybrid_classifier_LR_link)
 
     res = Predict(gd,
-            DLSet.hybrid_classifier_GBDT_link,
-            DLSet.hybrid_classifier_ENC_link,
-            DLSet.hybrid_classifier_LR_link)
+                  DLSet.hybrid_classifier_GBDT_link,
+                  DLSet.hybrid_classifier_ENC_link,
+                  DLSet.hybrid_classifier_LR_link)
 
     gd.Gen_Res(res, DLSet.resLRGBDT_link)

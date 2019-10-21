@@ -1,13 +1,13 @@
-import sys
-sys.path.append('../')
+import sys ;sys.path.append('../')
 
-from G_LinUCB.LinUCB_Disjoint_Model import *
-# from G_LinUCB.LinUCB_Hybrid_Model import *
+# from G_LinUCB.LinUCB_Disjoint_Model import *
+from G_LinUCB.LinUCB_Hybrid_Model import *
 from Tools import *
 import DataLinkSet as DLSet
 
 scalerU = LoadObj(DLSet.scaler_U_link)
 scalerI = LoadObj(DLSet.scaler_I_link)
+
 
 # 加载商品数据
 def GetFeature_I():
@@ -36,7 +36,7 @@ def Init():
     totalSet = []
     cnt = 0
     for alpha in np.arange(1.4, 2.3, 0.2):
-        obj.append(LinUCB_disjoint(alpha))
+        obj.append(LinUCB_hybrid(alpha))
         scoreSet.append(0)
         totalSet.append(0)
         # 初始化商品特征
@@ -105,7 +105,7 @@ def TrainBatch(obj, user, dataSet, dfU, N, f):
         for j in range(len(itemSet)):
             if res[i] == itemSet[j]:
                 reward.append(numSet[j])
-                score += numSet[j]
+                score += numSet[j] * (N - i)
                 flag = True
             break
         if flag is False:
@@ -148,7 +148,6 @@ def Train(obj, dataLink, fULink, scoreSet, totalSet, N=3):
     fw.close()
 
 
-
 def Main():
     # global scoreSet, totalSet
     # 初始化模型
@@ -161,7 +160,6 @@ def Main():
     print('2-----------------------------------------------------------------')
     Train(obj, DLSet.sorted_saleInfo_Train_R_link, DLSet.feature_U_train_link, scoreSet, totalSet)
     StoreObj(obj, DLSet.modelObj_link)
-
     print('3-----------------------------------------------------------------')
     Train(obj, DLSet.sorted_saleInfo_Judge_L_link, DLSet.feature_U_judge_link, scoreSet, totalSet)
     StoreObj(obj, DLSet.modelObj_link)

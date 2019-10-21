@@ -6,9 +6,9 @@ class LinUCB_hybrid:
     betaHat = None
 
     # 模型初始化
-    def __init__(self):
+    def __init__(self, alpha=2.1):
         # 初始化属性
-        self.alpha = 2.1                    # 1 + np.sqrt(np.log(2/delta)/2)
+        self.alpha = alpha      # 1 + np.sqrt(np.log(2/delta)/2)
         self.d = 6                          # size of user features
         self.k = self.d * self.d            # size of art features
         self.A0 = np.identity(self.k)       # initialization of env features, Line 1
