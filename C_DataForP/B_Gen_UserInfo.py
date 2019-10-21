@@ -54,6 +54,7 @@ def XStr2Int(df, mapLink):
     # df = XDate(df)
     return df
 
+
 # 主函数
 def Main(dataLink_Sales, dataLink_User, storeLink, mapLink):
     dfSale = LoadData(dataLink_Sales)

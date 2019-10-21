@@ -1,14 +1,13 @@
 """ 文件夹地址 """
-DataSetLink = '../../DataSet'               # 数据仓库总地址
-# DataSetLink = '../DataSet'               # 数据仓库总地址
-OrgSetLink = DataSetLink + '/OrgSet'        # 原始数据仓库地址
-CleanSetLink = DataSetLink + '/CleanSet'    # 清洗数据仓库地址
-ActualUsedSetLink = DataSetLink + '/ActualUsedSet'    # 程序主数据仓库地址
-MapSetLink = DataSetLink + '/MapSet'        # 映射数据仓库地址
-FeatureSetLink = DataSetLink + '/FeatureSet'    # 特征数据仓库地址
-TrainModelSetLink = DataSetLink + '/TrainModel'    # 模型训练数据仓库地址
-LinUCBSetLink = DataSetLink + '/LinUCB'     # LinUCB仓库地址
-ResSetLink = DataSetLink + '/ResSet'     # LinUCB仓库地址
+DataSetLink = '../../DataSet'                       # 数据仓库总地址
+# DataSetLink = '../DataSet'                        # 数据仓库总地址
+OrgSetLink = DataSetLink + '/OrgSet'                # 原始数据仓库地址
+CleanSetLink = DataSetLink + '/CleanSet'            # 清洗数据仓库地址
+ActualUsedSetLink = DataSetLink + '/ActualUsedSet'  # 程序主数据仓库地址
+MapSetLink = DataSetLink + '/MapSet'                # 映射数据仓库地址
+FeatureSetLink = DataSetLink + '/FeatureSet'        # 特征数据仓库地址
+TrainModelSetLink = DataSetLink + '/TrainModel'     # 模型训练数据仓库地址
+ResSetLink = DataSetLink + '/ResSet'                # 结果仓库地址
 
 # """ -------------------------------------------- 原始数据地址 -------------------------------------------- """
 # 原始数据
@@ -23,7 +22,7 @@ new_cssales_link = OrgSetLink + '/new_cssales'
 new_dateDim_link = OrgSetLink + '/new_dateDim'
 new_hyDim_link = OrgSetLink + '/new_hyDim'
 
-#　原始数据表头
+# 原始数据表头
 csfkmxDim_head = ['csfkmxId', 'mdcd', 'mdmc', 'jysj', 'sktno', 'jlbh',
                   'person_code', 'skfs', 'skname', 'skje']
 cssales_head = ['hyId', 'bbgmdId', 'dateId', 'csfkmxId', 'dlId', 'zlId', 'xlId', 'spId', 'csppId', 'spname',
@@ -119,19 +118,20 @@ sub_new_cssales_link = SubSetLink + '/sub_new_cssales'
 sub_fakeUser_link = SubSetLink + '/sub_fakeUser'
 sub_true_cssales_link = SubSetLink + '/sub_true_cssales'
 
-""" -------------------------------------------- 结果集合数据 -------------------------------------------- """
+# """ -------------------------------------------- 结果集合数据 -------------------------------------------- """
 resLinUCB_link = ResSetLink + '/resLinUCB_%d'
 resLR_link = ResSetLink + '/resLR'
 resGBDT_link = ResSetLink + '/resGBDT'
 resLRGBDT_link = ResSetLink + '/resLRGBDT'
 
+# """ -------------------------------------------- UCB模型数据 -------------------------------------------- """
+modelObj_link = TrainModelSetLink + '/modelObj'
+scaler_U_link = TrainModelSetLink + '/scaler_U'
+scaler_I_link = TrainModelSetLink + '/scaler_I'
 
-# """ -------------------------------------------- LinUCB数据 -------------------------------------------- """
-modelObj_link = LinUCBSetLink + '/modelObj'
-scaler_U_link = LinUCBSetLink + '/scaler_U'
-scaler_I_link = LinUCBSetLink + '/scaler_I'
 userFeatureSet = ['hykname', 'sex', 'mdmc', 'shdm', 'hyly', 'U_dayCount_After_0',
                   'U_avg_numCount_After_0', 'U_avg_payCount_After_0', 'U_avg_pmtRatio_After_0']
+
 itemFeatureSet = ['lsdj', 'I_numCount_After_0', 'I_payCount_After_0',
                   'I_usrCount_After_0', 'I_timCount_After_0', 'I_pmtCount_After_0',
                   'I_avg_numCount_After_0', 'I_avg_payCount_After_0', 'I_avg_pmtRatio_After_0']

@@ -97,10 +97,10 @@ if __name__ == '__main__':
         DLSet.feature_UI_judge_link,
     )
 
-    TrainHyBrid(gd, 15, 400,
-                DLSet.hybrid_classifier_GBDT_link,
-                DLSet.hybrid_classifier_ENC_link,
-                DLSet.hybrid_classifier_LR_link)
+    # TrainHyBrid(gd, 15, 400,
+    #             DLSet.hybrid_classifier_GBDT_link,
+    #             DLSet.hybrid_classifier_ENC_link,
+    #             DLSet.hybrid_classifier_LR_link)
 
     res = Predict(gd,
                   DLSet.hybrid_classifier_GBDT_link,

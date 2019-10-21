@@ -37,9 +37,7 @@ class LinUCB_disjoint:
         for i in range(0, self.total):
             bestP.append(self.arms[i].getP())
         bestP = [each[0][0] for each in bestP]
-        # print(bestP)
         self.currentArm = np.argpartition(bestP, -K)[-K:]
-        # print(self.currentArm)
         res = [self.arms[each].getID() for each in self.currentArm]
         return res
 
@@ -54,10 +52,3 @@ class LinUCB_disjoint:
             self.addArm(each, items[each])
 
 
-"""
-    bestP = dict()
-    for theArm in self.arms:
-        bestP[theArm] = self.arms[theArm].getP(x)
-    
-    self.currentArm = self.arms[max(bestP, key=lambda k: bestP[k])]
-"""
