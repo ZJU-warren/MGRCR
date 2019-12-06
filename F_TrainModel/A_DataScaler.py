@@ -64,7 +64,7 @@ def StandardScale(dataLink, dfU, dfI, dfUI):
 
 
 def Cluster(dataLink, dfU, dfI, dfUI, scaler):
-    mbk = MiniBatchKMeans(init='k-means++', n_clusters= DLSet.TOTAL_LABEL_CLASS,
+    mbk = MiniBatchKMeans(init='k-means++', n_clusters=DLSet.TOTAL_LABEL_CLASS,
                           batch_size=500, reassignment_ratio=10 ** -4)
     labelClass = []
 

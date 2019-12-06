@@ -1,4 +1,5 @@
 from G_LinUCB.LinUCB_Hybrid_Arm import *
+import random
 
 
 # 模型
@@ -9,7 +10,7 @@ class LinUCB_hybrid:
     def __init__(self, alpha=2.1):
         # 初始化属性
         self.alpha = alpha      # 1 + np.sqrt(np.log(2/delta)/2)
-        self.d = 6                          # size of user features
+        self.d = 6                         # size of user features
         self.k = self.d * self.d            # size of art features
         self.A0 = np.identity(self.k)       # initialization of env features, Line 1
         self.b0 = np.zeros((self.k, 1))     # Line 2
@@ -23,6 +24,8 @@ class LinUCB_hybrid:
         # 初始化记忆体
         self.currentArm = None
         self.total = 0
+        self.IDRecorder = {}
+        self.resSet = None
 
     # 增膀臂
     def addArm(self, id, feature):
@@ -39,32 +42,52 @@ class LinUCB_hybrid:
             print('Attempted to remove non-existed arm id', id)
 
     # 选择推荐
-    def recommend(self, user_features, K):
+    def recommend(self, user_features, K, trueSet=None):
         # load user feature
-        u = np.array(user_features[:self.d]).reshape((self.d, 1))
+        # print(np.array(user_features[0][0:self.d]))
+        u = np.array(user_features[0][:self.d]).reshape((self.d, 1))
 
         # Line 5
         self.betaHat = np.dot(linalg.inv(self.A0), self.b0)
 
         # Line 16
         bestP = []
-        for i in range(0, self.total):
-            bestP.append(self.arms[i].getP(self.A0, self.betaHat, u))
+        resSet = []
+
+        if trueSet is None:
+            for i in range(0, self.total):
+                resSet.append(i)
+        else:
+            for each in trueSet:
+                x = self.IDRecorder.get(each)
+                if x is not None:
+                    resSet.append(self.IDRecorder[each])
+
+            for i in range(30):
+                r = random.randint(0, self.total-1)
+                while r in trueSet:
+                    r = random.randint(0, self.total - 1)
+                resSet.append(r)
+
+        for each in resSet:
+            bestP.append(self.arms[each].getP(self.A0, self.betaHat, u))
+
         bestP = [each[0][0] for each in bestP]
         self.currentArm = np.argpartition(bestP, -K)[-K:]
-        res = [self.arms[each].getID() for each in self.currentArm]
+        res = [self.arms[resSet[each]].getID() for each in self.currentArm]
+        self.resSet = resSet
 
         return res
 
     # 更新结果
     def update(self, reward, N):
         for i in range(N):
-            reward[i] = reward[i] * (self.r1 if reward[i] > 0 else self.r0)
+            # reward[i] = reward[i] * (self.r1 if reward[i] > 0 else self.r0)
             # lines 17-18
-            z = self.arms[self.currentArm[i]].getz()
-            B = self.arms[self.currentArm[i]].getB()
-            A = self.arms[self.currentArm[i]].getA()
-            b = self.arms[self.currentArm[i]].getb()
+            z = self.arms[self.resSet[self.currentArm[i]]].getz()
+            B = self.arms[self.resSet[self.currentArm[i]]].getB()
+            A = self.arms[self.resSet[self.currentArm[i]]].getA()
+            b = self.arms[self.resSet[self.currentArm[i]]].getb()
             zT = np.transpose(z)
 
             self.A0 += np.dot(np.transpose(B),
@@ -73,7 +96,7 @@ class LinUCB_hybrid:
                               np.dot(linalg.inv(A), b))
 
             # Update the arm-specific matrices: lines 19-21
-            self.arms[self.currentArm[i]].update(reward[i])
+            self.arms[self.resSet[self.currentArm[i]]].update(reward[i])
 
             # Update the general matrices again: lines 22-23
 

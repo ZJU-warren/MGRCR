@@ -53,8 +53,8 @@ def Main(dataLink, storeLink_fakeU, storeLink_trueSale):
 
 
 def Run():
-    # Main(DLSet.sub_new_cssales_link, DLSet.sub_fakeUser_link, DLSet.true_cssales_link)
-    Main(DLSet.new_cssales_link, DLSet.fakeUser_link, DLSet.true_cssales_link)
+    Main(DLSet.sub_new_cssales_link, DLSet.sub_fakeUser_link, DLSet.true_cssales_link)
+    # Main(DLSet.new_cssales_link, DLSet.fakeUser_link, DLSet.true_cssales_link)
 
 
 if __name__ == '__main__':

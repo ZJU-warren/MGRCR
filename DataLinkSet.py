@@ -125,7 +125,7 @@ resGBDT_link = ResSetLink + '/resGBDT'
 resLRGBDT_link = ResSetLink + '/resLRGBDT'
 
 # """ -------------------------------------------- UCB模型数据 -------------------------------------------- """
-modelObj_link = TrainModelSetLink + '/modelObj'
+modelObj_link = TrainModelSetLink + '/modelObj_%s'
 scaler_U_link = TrainModelSetLink + '/scaler_U'
 scaler_I_link = TrainModelSetLink + '/scaler_I'
 
@@ -147,10 +147,12 @@ SPLIT_DAY_NUM = 300     # 学习天数的数值
 
 # 抽取数据子集
 TOP_ITEM_NUM = 10500        # 选取item数
-MIN_ITEM_SALE_LIMIT = 40
+# MIN_ITEM_SALE_LIMIT = 40
+MIN_ITEM_SALE_LIMIT = 5
 
 TOP_USER_NUM = 30000        # 选取user数
-MIN_USER_SALE_LIMIT = 30
+# MIN_USER_SALE_LIMIT = 30
+MIN_USER_SALE_LIMIT = 5
 
 TOTAL_LABEL_CLASS = 1000    # 1000个聚类点
 

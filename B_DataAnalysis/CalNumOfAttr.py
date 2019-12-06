@@ -24,6 +24,7 @@ def CalNumOfAttrSet(dataLink, attrSet):
     dfTemp = df.drop_duplicates(attrSet, keep='last')
     print(attrSet, ': shape[0] =', dfTemp.shape[0])
 
+
 if __name__ == '__main__':
     print('------------------csfkmxDim--------------------------')
     # CalNumOfAttr(DLSet.new_csfkmxDim_link, DLSet.csfkmxDim_head)
@@ -36,4 +37,4 @@ if __name__ == '__main__':
     print('------------------sub_new_cssales--------------------------')
     # CalNumOfAttr(DLSet.sub_new_cssales_link, DLSet.cssales_head)
     # CalNumOfAttrSet(DLSet.true_cssales_link, ['hyId', 'csfkmxId'])
-    CalNumOfAttrSet(DLSet.sub_saleInfo_link, ['userID'])
+    # CalNumOfAttrSet(DLSet.sub_saleInfo_link, ['userID'])

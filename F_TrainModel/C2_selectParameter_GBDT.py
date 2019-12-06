@@ -129,7 +129,7 @@ def Select_CutOff(gd, npRatio, nt):
     # ShowPic(coSet, f1Set, "penalty='l1'", 'GBDT: co -> f1', 'co')
     print('——————START——————')
     for i in range(len(f1Set)):
-        print('%d\t%f' % (coSet[i], f1Set[i]))
+        print('%f\t%f' % (coSet[i], f1Set[i]))
     print('———————END———————')
 
 
@@ -147,5 +147,5 @@ if __name__ == '__main__':
         DLSet.feature_UI_judge_link,
     )
     # Select_NPRatio(gd)
-    # Select_nEstimators_as_LearningRate_0d05(gd, 15)
+    Select_nEstimators_as_LearningRate_0d05(gd, 22)
     # Select_CutOff(gd, 15, 300)

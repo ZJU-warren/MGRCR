@@ -61,7 +61,6 @@ def Main(dataLink, storeLink):
     df = Keep_SubSale(df, df_Sub_I, 'itemID')
     print('-', df.shape[0])
 
-
     # 获得用户-购物数目表
     df_U_BNum = Gen_User_BuyNum(df)
     # 随机选出部分用户

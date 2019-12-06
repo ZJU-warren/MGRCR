@@ -116,7 +116,7 @@ def Select_CutOff(gd, npRatio, c):
     # ShowPic(coSet, f1Set, "penalty='l1'", 'LR: co -> f1', 'co')
     print('——————START——————')
     for i in range(len(f1Set)):
-        print('%d\t%f' % (coSet[i], f1Set[i]))
+        print('%f\t%f' % (coSet[i], f1Set[i]))
     print('———————END———————')
 
 
@@ -133,6 +133,6 @@ if __name__ == '__main__':
         DLSet.feature_I_judge_link,
         DLSet.feature_UI_judge_link,
     )
-    Select_NPRatio(gd)
-    # Select_Regularization_Strength(gd, 15)
-    # Select_CutOff(gd, 15, 50)
+    # Select_NPRatio(gd)
+    # Select_Regularization_Strength(gd, 7)
+    Select_CutOff(gd, 7, 30)

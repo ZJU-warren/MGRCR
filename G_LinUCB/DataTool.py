@@ -45,7 +45,6 @@ def GetFeature_I():
     return itemDic
 
 
-
 if __name__ == '__main__':
     for user, itemSet in GetNextBatch(DLSet.sorted_saleInfo_Judge_R_link):
         print(user, itemSet)

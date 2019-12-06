@@ -1,5 +1,5 @@
 from G_LinUCB.LinUCB_Disjoint_Arm import *
-
+import random
 
 # 模型
 class LinUCB_disjoint:
@@ -17,10 +17,13 @@ class LinUCB_disjoint:
         # 初始化记忆体
         self.currentArm = None
         self.total = 0
+        self.IDRecorder = {}
+        self.resSet = None
 
     # 增膀臂
     def addArm(self, id, feature):
         self.arms.append(Arm_disjoint(id, self.d, self.alpha, feature))
+        self.IDRecorder[id] = self.total
         self.total += 1
 
     # 减膀臂
@@ -32,19 +35,40 @@ class LinUCB_disjoint:
             print('Attempted to remove non-existed arm id', id)
 
     # 选择推荐
-    def recommend(self, user_features, K):
+    def recommend(self, user_features, K, trueSet=None):
         bestP = []
-        for i in range(0, self.total):
-            bestP.append(self.arms[i].getP())
+        resSet = []
+        if trueSet is None:
+            for i in range(0, self.total):
+                resSet.append(i)
+        else:
+            for each in trueSet:
+                x = self.IDRecorder.get(each)
+                if x is not None:
+                    resSet.append(self.IDRecorder[each])
+
+            for i in range(30):
+                r = random.randint(0, self.total-1)
+                while r in trueSet:
+                    r = random.randint(0, self.total - 1)
+                resSet.append(r)
+
+        for each in resSet:
+            bestP.append(self.arms[each].getP())
+
         bestP = [each[0][0] for each in bestP]
         self.currentArm = np.argpartition(bestP, -K)[-K:]
-        res = [self.arms[each].getID() for each in self.currentArm]
+        res = [self.arms[resSet[each]].getID() for each in self.currentArm]
+        self.resSet = resSet
         return res
 
     # 更新结果
-    def update(self, reward, n):
-        for i in range(0, n):
-            self.arms[self.currentArm[i]].update(reward[i])
+    def update(self, reward, K):
+        for i in range(0, K):
+            # print('there is :', self.arms[self.resSet[self.currentArm[i]]].getID())
+            # print('reward is :', reward)
+            # if self.resSet[self.currentArm[i]] in self.
+            self.arms[self.resSet[self.currentArm[i]]].update(reward[i])
 
     # 初始化所有的arm
     def set_allArm(self, items):

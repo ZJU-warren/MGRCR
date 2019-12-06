@@ -32,15 +32,15 @@ def MapStr2Int(dfOrg, str, mapLink):
 
     # 原表和映射表合并
     dfOrg = pd.merge(dfOrg, df, on=[str])
-    print(dfOrg.head(5))
+    # print(dfOrg.head(5))
 
     # 替换后删掉多余列
     dfOrg[str] = dfOrg[str + 'ID']
 
-    print(dfOrg.head(5))
+    # print(dfOrg.head(5))
 
     dfOrg.drop(columns=[str + 'ID'])
-    print(dfOrg.head(5))
+    # print(dfOrg.head(5))
 
     return dfOrg
 

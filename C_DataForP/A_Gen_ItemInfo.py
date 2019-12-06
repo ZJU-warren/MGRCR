@@ -5,6 +5,7 @@ import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
 
+
 # 添加itemID，删除不必要列
 def Gen_itemID(df):
     # 选出所有的商品名
@@ -35,6 +36,6 @@ def Run():
 
 
 if __name__ == '__main__':
-    # Run()
+    Run()
     pass
 

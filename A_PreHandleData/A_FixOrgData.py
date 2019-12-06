@@ -27,6 +27,6 @@ def Run():
 
 
 if __name__ == '__main__':
-    # Run()
-    print('nothing happens')
+    Run()
+    # print('nothing happens')
 

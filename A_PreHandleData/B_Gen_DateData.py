@@ -38,5 +38,5 @@ def Run():
 
 
 if __name__ == '__main__':
-    # Run()
-    pass
+    Run()
+    # pass

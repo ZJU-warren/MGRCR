@@ -1,6 +1,3 @@
-"""
-    生成UI, UILabel用于评估
-"""
 import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
@@ -13,7 +10,7 @@ def Gen_UI(dfSale, dfItem):
     # 去掉重复的 UserID
     dfS = dfS.drop_duplicates(['userID'], keep='last')
     dfS['tempMark'] = 1
-    print('user: ', dfS.shape[0])
+    print('涉及用户数: ', dfS.shape[0])
     # 获得需预测的商品集
     dfI = dfItem[['itemID']].copy()
     dfI['tempMark'] = 1
@@ -42,7 +39,7 @@ def Gen_UILabel(dfSale, dfUI):
 def Main(saleLink, storeLink_UI, storeLink_UILabel):
     dfSale = LoadData(saleLink)
     dfItem = dfSale.drop_duplicates(['itemID'], keep='last')[['itemID']]
-    print('item: ', dfItem.shape[0])
+    print('涉及物品数: ', dfItem.shape[0])
     # 生成UI
     dfUI = Gen_UI(dfSale, dfItem)
     dfUI.to_csv(storeLink_UI, index=False)
@@ -51,8 +48,8 @@ def Main(saleLink, storeLink_UI, storeLink_UILabel):
     dfUILabel = Gen_UILabel(dfSale, dfUI)
     dfUILabel.to_csv(storeLink_UILabel, index=False)
 
-    print(dfUILabel.shape[0])
-    print(dfUILabel[dfUILabel.label == 1].shape[0])
+    print('总数:', dfUILabel.shape[0])
+    print('正样本数:', dfUILabel[dfUILabel.label == 1].shape[0])
 
 
 def Run():

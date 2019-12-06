@@ -2,8 +2,8 @@ import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
 from G_LinUCB.DataTool import *
-from G_LinUCB.LinUCB_Disjoint_Model import *
-# from G_LinUCB.LinUCB_Hybrid_Model import *
+# from G_LinUCB.LinUCB_Disjoint_Model import *
+from G_LinUCB.LinUCB_Hybrid_Model import *
 
 
 # 获取模型实例
@@ -14,7 +14,7 @@ def Init():
     objCnt = 0
 
     for alpha in np.arange(1.4, 2.3, 0.4):
-        obj.append(LinUCB_disjoint(alpha))
+        obj.append(LinUCB_hybrid(alpha))
         scoreSet.append(0)
         totalSet.append(0)
 
@@ -51,7 +51,6 @@ def UpdateASample(obj, user, itemList, dfU, S):
         else:
             reward.append(0)
     obj.update(reward, N)
-    # print('recommend_list:', recommend_list)
     return N, sum(reward)
 
 
@@ -85,14 +84,14 @@ def Main():
     obj, objCnt, scoreSet, totalSet = Init()
 
     TrainBatch(obj, DLSet.sorted_saleInfo_Train_L_link, DLSet.feature_U_train_link, scalerU)
-    StoreObj(obj, DLSet.modelObj_link % 'disjoint')
+    StoreObj(obj, DLSet.modelObj_link % 'hybrid')
     TrainBatch(obj, DLSet.sorted_saleInfo_Train_R_link, DLSet.feature_U_train_link, scalerU)
-    StoreObj(obj, DLSet.modelObj_link % 'disjoint')
+    StoreObj(obj, DLSet.modelObj_link % 'hybrid')
     TrainBatch(obj, DLSet.sorted_saleInfo_Judge_L_link, DLSet.feature_U_judge_link, scalerU)
-    StoreObj(obj, DLSet.modelObj_link % 'disjoint')
+    StoreObj(obj, DLSet.modelObj_link % 'hybrid')
 
     print('---------------------Predict--------------------')
-    obj = LoadObj(DLSet.modelObj_link % 'disjoint')
+    obj = LoadObj(DLSet.modelObj_link % 'hybrid')
     print('---------------------Predict dont change--------------------')
     TrainBatch(obj, DLSet.sorted_saleInfo_Judge_R_link, DLSet.feature_U_judge_link, scalerU, 1)
     TrainBatch(obj, DLSet.sorted_saleInfo_Judge_R_link, DLSet.feature_U_judge_link, scalerU, 2)

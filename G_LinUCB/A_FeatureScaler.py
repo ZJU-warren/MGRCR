@@ -14,7 +14,6 @@ def TrainStandardScale(scaler, dataLink, idStr):
     for df in pd.read_csv(open(dataLink, 'r'), chunksize=150000):
         try:
             # 按label不同分开
-            orgSize = df.shape[0]
             if idStr == 'userID':
                 df = df.drop(columns=[idStr])[DLSet.userFeatureSet]
             else:

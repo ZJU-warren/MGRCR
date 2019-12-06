@@ -39,13 +39,13 @@ def SortByUser(dataLink, storeLink):
 
 
 def Run():
-    # Gen_LR_part(DLSet.saleInfo_Train_link, DLSet.saleInfo_Train_L_link, DLSet.saleInfo_Train_R_link)
-    # Gen_LR_part(DLSet.saleInfo_Judge_link, DLSet.saleInfo_Judge_L_link, DLSet.saleInfo_Judge_R_link)
+    Gen_LR_part(DLSet.saleInfo_Train_link, DLSet.saleInfo_Train_L_link, DLSet.saleInfo_Train_R_link)
+    Gen_LR_part(DLSet.saleInfo_Judge_link, DLSet.saleInfo_Judge_L_link, DLSet.saleInfo_Judge_R_link)
 
-    # Format(DLSet.saleInfo_Train_L_link, DLSet.sorted_saleInfo_Train_L_link)
-    # Format(DLSet.saleInfo_Train_R_link, DLSet.sorted_saleInfo_Train_R_link)
-    # Format(DLSet.saleInfo_Judge_L_link, DLSet.sorted_saleInfo_Judge_L_link)
-    # Format(DLSet.saleInfo_Judge_R_link, DLSet.sorted_saleInfo_Judge_R_link)
+    Format(DLSet.saleInfo_Train_L_link, DLSet.sorted_saleInfo_Train_L_link)
+    Format(DLSet.saleInfo_Train_R_link, DLSet.sorted_saleInfo_Train_R_link)
+    Format(DLSet.saleInfo_Judge_L_link, DLSet.sorted_saleInfo_Judge_L_link)
+    Format(DLSet.saleInfo_Judge_R_link, DLSet.sorted_saleInfo_Judge_R_link)
 
     SortByUser(DLSet.sorted_saleInfo_Judge_R_link, DLSet.sortedByUser_saleInfo_Judge_R_link)
 
