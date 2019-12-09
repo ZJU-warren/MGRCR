@@ -135,4 +135,7 @@ if __name__ == '__main__':
     )
     # Select_NPRatio(gd)
     # Select_Regularization_Strength(gd, 7)
-    Select_CutOff(gd, 7, 30)
+    # Select_CutOff(gd, 7, 30)
+
+    Select_Regularization_Strength(gd, 31)
+    # Select_CutOff(gd, 7, 30)

@@ -50,7 +50,15 @@ def UpdateASample(obj, user, itemList, dfU, S):
             reward.append(1)
         else:
             reward.append(0)
-    obj.update(reward, N)
+    for each in recommend_list:
+        if each in itemSet:
+            print(str(user) + ',' + str(each) + ',1,1')
+        else:
+            print(str(user) + ',' + str(each) + ',0,1')
+    for each in itemSet:
+        if each not in recommend_list:
+            print(str(user) + ',' + str(each) + ',1,0')
+    # obj.update(reward, N)
     # print('recommend_list:', recommend_list)
     return N, sum(reward)
 
@@ -67,46 +75,47 @@ def TrainBatch(obj, dataLink, fULink, scalerU, N=-1):
     lenObj = len(obj)
 
     for user, itemList in GetNextBatch(dataLink):
-        for i in range(lenObj):
+        for i in [0]:   #range(lenObj):
             total, score = UpdateASample(obj[i], user, itemList, dfU, N)
             # print(score, total)
             scoreSet[i] += score
             totalSet[i] += total
             # print('alpha = %f: hitRatio =%f' % (1.4 + 0.4 * i, scoreSet[i] / totalSet[i]))
-
-    for i in range(lenObj):
-        print('alpha = %f: hitRatio =%f' % (1.4 + 0.4 * i, scoreSet[i] / totalSet[i]))
+    #
+    # for i in [0]:
+    #     print('alpha = %f: hitRatio =%f' % (1.4 + 0.4 * i, scoreSet[i] / totalSet[i]))
 
 
 def Main():
     # 读取标准化scaler
     scalerU = LoadObj(DLSet.scaler_U_link)
 
-    obj, objCnt, scoreSet, totalSet = Init()
+    # obj, objCnt, scoreSet, totalSet = Init()
+    #
+    # TrainBatch(obj, DLSet.sorted_saleInfo_Train_L_link, DLSet.feature_U_train_link, scalerU)
+    # StoreObj(obj, DLSet.modelObj_link % 'disjoint')
+    # TrainBatch(obj, DLSet.sorted_saleInfo_Train_R_link, DLSet.feature_U_train_link, scalerU)
+    # StoreObj(obj, DLSet.modelObj_link % 'disjoint')
+    # TrainBatch(obj, DLSet.sorted_saleInfo_Judge_L_link, DLSet.feature_U_judge_link, scalerU)
+    # StoreObj(obj, DLSet.modelObj_link % 'disjoint')
 
-    TrainBatch(obj, DLSet.sorted_saleInfo_Train_L_link, DLSet.feature_U_train_link, scalerU)
-    StoreObj(obj, DLSet.modelObj_link % 'disjoint')
-    TrainBatch(obj, DLSet.sorted_saleInfo_Train_R_link, DLSet.feature_U_train_link, scalerU)
-    StoreObj(obj, DLSet.modelObj_link % 'disjoint')
-    TrainBatch(obj, DLSet.sorted_saleInfo_Judge_L_link, DLSet.feature_U_judge_link, scalerU)
-    StoreObj(obj, DLSet.modelObj_link % 'disjoint')
-
-    print('---------------------Predict--------------------')
+    # print('---------------------Predict--------------------')
     obj = LoadObj(DLSet.modelObj_link % 'disjoint')
-    print('---------------------Predict dont change--------------------')
-    TrainBatch(obj, DLSet.sorted_saleInfo_Judge_R_link, DLSet.feature_U_judge_link, scalerU, 1)
-    TrainBatch(obj, DLSet.sorted_saleInfo_Judge_R_link, DLSet.feature_U_judge_link, scalerU, 2)
-    TrainBatch(obj, DLSet.sorted_saleInfo_Judge_R_link, DLSet.feature_U_judge_link, scalerU, 3)
 
-    print('---------------------Predict set 1--------------------')
-    for each in obj:
-        each.alpha = 1
-        for _ in each.arms:
-            _.alpha = 1
-    TrainBatch(obj, DLSet.sorted_saleInfo_Judge_R_link, DLSet.feature_U_judge_link, scalerU, 1)
-    TrainBatch(obj, DLSet.sorted_saleInfo_Judge_R_link, DLSet.feature_U_judge_link, scalerU, 2)
+    # print('---------------------Predict dont change--------------------')
+    # TrainBatch(obj, DLSet.sorted_saleInfo_Judge_R_link, DLSet.feature_U_judge_link, scalerU, 1)
+    # TrainBatch(obj, DLSet.sorted_saleInfo_Judge_R_link, DLSet.feature_U_judge_link, scalerU, 2)
     TrainBatch(obj, DLSet.sorted_saleInfo_Judge_R_link, DLSet.feature_U_judge_link, scalerU, 3)
-
+    #
+    # print('---------------------Predict set 1--------------------')
+    # for each in obj:
+    #     each.alpha = 1
+    #     for _ in each.arms:
+    #         _.alpha = 1
+    # TrainBatch(obj, DLSet.sorted_saleInfo_Judge_R_link, DLSet.feature_U_judge_link, scalerU, 1)
+    # TrainBatch(obj, DLSet.sorted_saleInfo_Judge_R_link, DLSet.feature_U_judge_link, scalerU, 2)
+    # TrainBatch(obj, DLSet.sorted_saleInfo_Judge_R_link, DLSet.feature_U_judge_link, scalerU, 3)
+    #
 
 if __name__ == '__main__':
     Main()

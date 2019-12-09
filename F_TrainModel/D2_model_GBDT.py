@@ -74,6 +74,6 @@ if __name__ == '__main__':
         DLSet.feature_I_judge_link,
         DLSet.feature_UI_judge_link,
     )
-    TrainGBDT(gd, 19, 160, DLSet.classifier_GBDT_link)
+    # TrainGBDT(gd, 19, 160, DLSet.classifier_GBDT_link)
     res = Predict(gd, DLSet.classifier_GBDT_link)
     gd.Gen_Res(res, DLSet.resGBDT_link)

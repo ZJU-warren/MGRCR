@@ -1,9 +1,9 @@
 import sys ;sys.path.append('../')
 from Tools import *
 import DataLinkSet as DLSet
-from G_LinUCB.DataTool import *
+from H_HybridModel.DataTool import *
 # from G_LinUCB.LinUCB_Disjoint_Model import *
-from G_LinUCB.LinUCB_Hybrid_Model import *
+from H_HybridModel.Hybrid_Model import *
 
 
 # 获取模型实例
@@ -13,7 +13,7 @@ def Init():
     totalSet = []
     objCnt = 0
 
-    for alpha in np.arange(1.4, 2.3, 0.4):
+    for alpha in [1.4]: #np.arange(1.4, 2.3, 0.4):
         obj.append(LinUCB_hybrid(alpha))
         scoreSet.append(0)
         totalSet.append(0)
@@ -41,9 +41,9 @@ def UpdateASample(obj, user, itemList, dfU, S):
 
     user_features = dfU[dfU['userID'] == user].values
     if S == -1:
-        recommend_list = obj.recommend(user_features, N, itemSet)
+        recommend_list = obj.recommend(user_features, N, user, itemSet)
     else:
-        recommend_list = obj.recommend(user_features, N)
+        recommend_list = obj.recommend(user_features, N, user)
     reward = []
     for each in recommend_list:
         if each in itemSet:
@@ -80,18 +80,18 @@ def TrainBatch(obj, dataLink, fULink, scalerU, N=-1):
 def Main():
     # 读取标准化scaler
     scalerU = LoadObj(DLSet.scaler_U_link)
-    #
-    # obj, objCnt, scoreSet, totalSet = Init()
-    #
-    # TrainBatch(obj, DLSet.sorted_saleInfo_Train_L_link, DLSet.feature_U_train_link, scalerU)
-    # StoreObj(obj, DLSet.modelObj_link % 'hybrid')
-    # TrainBatch(obj, DLSet.sorted_saleInfo_Train_R_link, DLSet.feature_U_train_link, scalerU)
-    # StoreObj(obj, DLSet.modelObj_link % 'hybrid')
-    # TrainBatch(obj, DLSet.sorted_saleInfo_Judge_L_link, DLSet.feature_U_judge_link, scalerU)
-    # StoreObj(obj, DLSet.modelObj_link % 'hybrid')
-    #
+
+    obj, objCnt, scoreSet, totalSet = Init()
+
+    TrainBatch(obj, DLSet.sorted_saleInfo_Train_L_link, DLSet.feature_U_train_link, scalerU)
+    StoreObj(obj, DLSet.modelObj_link % 'gbdt_hybrid')
+    TrainBatch(obj, DLSet.sorted_saleInfo_Train_R_link, DLSet.feature_U_train_link, scalerU)
+    StoreObj(obj, DLSet.modelObj_link % 'gbdt_hybrid')
+    TrainBatch(obj, DLSet.sorted_saleInfo_Judge_L_link, DLSet.feature_U_judge_link, scalerU)
+    StoreObj(obj, DLSet.modelObj_link % 'gbdt_hybrid')
+
     print('---------------------Predict--------------------')
-    obj = LoadObj(DLSet.modelObj_link % 'hybrid')
+    obj = LoadObj(DLSet.modelObj_link % 'gbdt_hybrid')
     print('---------------------Predict dont change--------------------')
     TrainBatch(obj, DLSet.sorted_saleInfo_Judge_R_link, DLSet.feature_U_judge_link, scalerU, 1)
     TrainBatch(obj, DLSet.sorted_saleInfo_Judge_R_link, DLSet.feature_U_judge_link, scalerU, 2)

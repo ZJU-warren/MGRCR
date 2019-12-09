@@ -2,51 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dfbe97f-d8fe-4bbc-82da-3c92ae650740" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G_LinUCB/B_Train_Hybrid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H_HybridModel/DataTool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H_HybridModel/Hybrid_Arm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H_HybridModel/Hybrid_Model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H_HybridModel/Train_Hybrid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/H_HybridModel/fTool.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/A_PreHandleData/A_FixOrgData.py" beforeDir="false" afterPath="$PROJECT_DIR$/A_PreHandleData/A_FixOrgData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/A_PreHandleData/B_Gen_DateData.py" beforeDir="false" afterPath="$PROJECT_DIR$/A_PreHandleData/B_Gen_DateData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/A_PreHandleData/C_Gen_FakeUser.py" beforeDir="false" afterPath="$PROJECT_DIR$/A_PreHandleData/C_Gen_FakeUser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/A_PreHandleData/D_Gen_SubData.py" beforeDir="false" afterPath="$PROJECT_DIR$/A_PreHandleData/D_Gen_SubData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/B_DataAnalysis/CalMaxSales.py" beforeDir="false" afterPath="$PROJECT_DIR$/B_DataAnalysis/CalMaxSales.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/B_DataAnalysis/CalNumOfAttr.py" beforeDir="false" afterPath="$PROJECT_DIR$/B_DataAnalysis/CalNumOfAttr.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C_DataForP/A_Gen_ItemInfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_DataForP/A_Gen_ItemInfo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C_DataForP/B_Gen_UserInfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_DataForP/B_Gen_UserInfo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C_DataForP/C_Gen_DateInfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_DataForP/C_Gen_DateInfo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C_DataForP/D_Gen_SaleInfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_DataForP/D_Gen_SaleInfo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C_DataForP/E_Gen_Sub_SaleInfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_DataForP/E_Gen_Sub_SaleInfo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Console.py" beforeDir="false" afterPath="$PROJECT_DIR$/Console.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/D_SplitData2Train/A_SplitByUser.py" beforeDir="false" afterPath="$PROJECT_DIR$/D_SplitData2Train/A_SplitByUser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/D_SplitData2Train/B_SplitSaleInfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/D_SplitData2Train/B_SplitSaleInfo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/D_SplitData2Train/C_SplitSaleInfo_LR.py" beforeDir="false" afterPath="$PROJECT_DIR$/D_SplitData2Train/C_SplitSaleInfo_LR.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/D_SplitData2Train/D_Gen_UILabel.py" beforeDir="false" afterPath="$PROJECT_DIR$/D_SplitData2Train/D_Gen_UILabel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataLinkSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataLinkSet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E_FeatureProject/A_Feature_U.py" beforeDir="false" afterPath="$PROJECT_DIR$/E_FeatureProject/A_Feature_U.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E_FeatureProject/B_Feature_I.py" beforeDir="false" afterPath="$PROJECT_DIR$/E_FeatureProject/B_Feature_I.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/E_FeatureProject/C_Feature_UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/E_FeatureProject/C_Feature_UI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/F_TrainModel/A_DataScaler.py" beforeDir="false" afterPath="$PROJECT_DIR$/F_TrainModel/A_DataScaler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/F_TrainModel/B_GenNewCluster.py" beforeDir="false" afterPath="$PROJECT_DIR$/F_TrainModel/B_GenNewCluster.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/F_TrainModel/C1_selectParameter_LR.py" beforeDir="false" afterPath="$PROJECT_DIR$/F_TrainModel/C1_selectParameter_LR.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/F_TrainModel/C2_selectParameter_GBDT.py" beforeDir="false" afterPath="$PROJECT_DIR$/F_TrainModel/C2_selectParameter_GBDT.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/F_TrainModel/D1_model_LR.py" beforeDir="false" afterPath="$PROJECT_DIR$/F_TrainModel/D1_model_LR.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/F_TrainModel/D2_model_GBDT.py" beforeDir="false" afterPath="$PROJECT_DIR$/F_TrainModel/D2_model_GBDT.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/F_TrainModel/D3_Hybrid_LR_GBDT.py" beforeDir="false" afterPath="$PROJECT_DIR$/F_TrainModel/D3_Hybrid_LR_GBDT.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/F_TrainModel/GenDataTool.py" beforeDir="false" afterPath="$PROJECT_DIR$/F_TrainModel/GenDataTool.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G_LinUCB/A_FeatureScaler.py" beforeDir="false" afterPath="$PROJECT_DIR$/G_LinUCB/A_FeatureScaler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/G_LinUCB/B_Train.py" beforeDir="false" afterPath="$PROJECT_DIR$/G_LinUCB/B_Train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G_LinUCB/DataTool.py" beforeDir="false" afterPath="$PROJECT_DIR$/G_LinUCB/DataTool.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G_LinUCB/LinUCB_Disjoint_Arm.py" beforeDir="false" afterPath="$PROJECT_DIR$/G_LinUCB/LinUCB_Disjoint_Arm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G_LinUCB/B_Train_Hybrid.py" beforeDir="false" afterPath="$PROJECT_DIR$/G_LinUCB/B_Train_Hybrid.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/G_LinUCB/LinUCB_Disjoint_Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/G_LinUCB/LinUCB_Disjoint_Model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G_LinUCB/LinUCB_Hybrid_Arm.py" beforeDir="false" afterPath="$PROJECT_DIR$/G_LinUCB/LinUCB_Hybrid_Arm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/G_LinUCB/LinUCB_Hybrid_Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/G_LinUCB/LinUCB_Hybrid_Model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,13 +31,14 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/G_LinUCB" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/H_HybridModel" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/H_HybridModel" />
       <recent name="$PROJECT_DIR$/G_LinUCB" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -86,7 +57,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.B_Train">
+  <component name="RunManager" selected="Python.Analysis">
+    <configuration name="Analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Analysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="B_Train" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,7 +102,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="B_Train_Hybrid" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="D1_model_LR" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -117,12 +110,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/G_LinUCB" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/F_TrainModel" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/G_LinUCB/B_Train_Hybrid.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/F_TrainModel/D1_model_LR.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -131,7 +124,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="DataTool" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="D2_model_GBDT" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -139,12 +132,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/G_LinUCB" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/F_TrainModel" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/G_LinUCB/DataTool.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/F_TrainModel/D2_model_GBDT.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,7 +146,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="LinUCB_Disjoint_Model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="D3_Hybrid_LR_GBDT" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -161,34 +154,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/G_LinUCB" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/F_TrainModel" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/G_LinUCB/LinUCB_Disjoint_Model.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="LinUCB_Hybrid_Model" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/G_LinUCB" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/G_LinUCB/LinUCB_Hybrid_Model.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/F_TrainModel/D3_Hybrid_LR_GBDT.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -199,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.B_Train_Hybrid" />
+        <item itemvalue="Python.Analysis" />
         <item itemvalue="Python.B_Train" />
-        <item itemvalue="Python.LinUCB_Hybrid_Model" />
-        <item itemvalue="Python.LinUCB_Disjoint_Model" />
-        <item itemvalue="Python.DataTool" />
+        <item itemvalue="Python.D3_Hybrid_LR_GBDT" />
+        <item itemvalue="Python.D1_model_LR" />
+        <item itemvalue="Python.D2_model_GBDT" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +191,9 @@
       <workItem from="1571553827935" duration="12547000" />
       <workItem from="1571654218810" duration="5474000" />
       <workItem from="1571706255214" duration="89000" />
-      <workItem from="1575617058745" duration="15328000" />
+      <workItem from="1575617058745" duration="19827000" />
+      <workItem from="1575881686663" duration="6388000" />
+      <workItem from="1575892845662" duration="724000" />
     </task>
     <servers />
   </component>
@@ -241,7 +214,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -253,34 +228,37 @@
     <SUITE FILE_PATH="coverage/Project$C_Gen_FakeUser.coverage" NAME="C_Gen_FakeUser Coverage Results" MODIFIED="1575631929478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/A_PreHandleData" />
     <SUITE FILE_PATH="coverage/Project$CalMaxSales.coverage" NAME="CalMaxSales Coverage Results" MODIFIED="1575631965671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/B_DataAnalysis" />
     <SUITE FILE_PATH="coverage/Project$LinUCB_Disjoint_Model.coverage" NAME="LinUCB_Disjoint_Model Coverage Results" MODIFIED="1575640867362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/G_LinUCB" />
-    <SUITE FILE_PATH="coverage/Project$D2_model_GBDT.coverage" NAME="D2_model_GBDT Coverage Results" MODIFIED="1575635267961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
     <SUITE FILE_PATH="coverage/Project$A_FeatureScaler.coverage" NAME="A_FeatureScaler Coverage Results" MODIFIED="1575635688990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/G_LinUCB" />
+    <SUITE FILE_PATH="coverage/Project$Hybrid_Arm.coverage" NAME="Hybrid_Arm Coverage Results" MODIFIED="1575787006349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/H_HybridModel" />
+    <SUITE FILE_PATH="coverage/Project$D2_model_GBDT.coverage" NAME="D2_model_GBDT Coverage Results" MODIFIED="1575886949796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
     <SUITE FILE_PATH="coverage/Project$B_Gen_UserInfo.coverage" NAME="B_Gen_UserInfo Coverage Results" MODIFIED="1575632359555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/C_DataForP" />
     <SUITE FILE_PATH="coverage/Project$D_Gen_UILabel.coverage" NAME="D_Gen_UILabel Coverage Results" MODIFIED="1575633931692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/D_SplitData2Train" />
     <SUITE FILE_PATH="coverage/Project$CalNumOfAttr.coverage" NAME="CalNumOfAttr Coverage Results" MODIFIED="1575632108329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/B_DataAnalysis" />
     <SUITE FILE_PATH="coverage/Project$C_SplitSaleInfo_LR.coverage" NAME="C_SplitSaleInfo_LR Coverage Results" MODIFIED="1575633927975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/D_SplitData2Train" />
-    <SUITE FILE_PATH="coverage/Project$Analysis.coverage" NAME="Analysis Coverage Results" MODIFIED="1571633570481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Project$B_Train_Hybrid__1_.coverage" NAME="B_Train_Hybrid (1) Coverage Results" MODIFIED="1575882049338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/H_HybridModel" />
+    <SUITE FILE_PATH="coverage/Project$Analysis.coverage" NAME="Analysis Coverage Results" MODIFIED="1575892961688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project$C_Gen_DateInfo.coverage" NAME="C_Gen_DateInfo Coverage Results" MODIFIED="1575632422759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/C_DataForP" />
     <SUITE FILE_PATH="coverage/Project$B_Feature_I.coverage" NAME="B_Feature_I Coverage Results" MODIFIED="1575633988256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/E_FeatureProject" />
     <SUITE FILE_PATH="coverage/Project$B_Gen_DateData.coverage" NAME="B_Gen_DateData Coverage Results" MODIFIED="1575626167130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/A_PreHandleData" />
     <SUITE FILE_PATH="coverage/Project$GenDataTool.coverage" NAME="GenDataTool Coverage Results" MODIFIED="1571657650697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/G_LinUCB" />
     <SUITE FILE_PATH="coverage/Project$DataLinkSet.coverage" NAME="DataLinkSet Coverage Results" MODIFIED="1575617143148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project$LinUCB_Hybrid_Model.coverage" NAME="LinUCB_Hybrid_Model Coverage Results" MODIFIED="1575642273336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/G_LinUCB" />
-    <SUITE FILE_PATH="coverage/Project$B_Train.coverage" NAME="B_Train Coverage Results" MODIFIED="1575642823814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/G_LinUCB" />
+    <SUITE FILE_PATH="coverage/Project$B_Train.coverage" NAME="B_Train Coverage Results" MODIFIED="1575889744802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/G_LinUCB" />
     <SUITE FILE_PATH="coverage/Project$A_FixOrgData.coverage" NAME="A_FixOrgData Coverage Results" MODIFIED="1575617386338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/A_PreHandleData" />
-    <SUITE FILE_PATH="coverage/Project$B_Train_Hybrid.coverage" NAME="B_Train_Hybrid Coverage Results" MODIFIED="1575643668891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/G_LinUCB" />
-    <SUITE FILE_PATH="coverage/Project$D1_model_LR.coverage" NAME="D1_model_LR Coverage Results" MODIFIED="1575634766068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
+    <SUITE FILE_PATH="coverage/Project$B_Train_Hybrid.coverage" NAME="B_Train_Hybrid Coverage Results" MODIFIED="1575881820721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/G_LinUCB" />
+    <SUITE FILE_PATH="coverage/Project$D1_model_LR.coverage" NAME="D1_model_LR Coverage Results" MODIFIED="1575886990135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
     <SUITE FILE_PATH="coverage/Project$E_Gen_Sub_SaleInfo.coverage" NAME="E_Gen_Sub_SaleInfo Coverage Results" MODIFIED="1575633902227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/C_DataForP" />
     <SUITE FILE_PATH="coverage/Project$B_GenNewCluster.coverage" NAME="B_GenNewCluster Coverage Results" MODIFIED="1575634433018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
     <SUITE FILE_PATH="coverage/Project$DataTool.coverage" NAME="DataTool Coverage Results" MODIFIED="1575635915713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/G_LinUCB" />
     <SUITE FILE_PATH="coverage/Project$A_SplitByUser.coverage" NAME="A_SplitByUser Coverage Results" MODIFIED="1575633919288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/D_SplitData2Train" />
-    <SUITE FILE_PATH="coverage/Project$D3_Hybrid_LR_GBDT.coverage" NAME="D3_Hybrid_LR_GBDT Coverage Results" MODIFIED="1575635330750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
+    <SUITE FILE_PATH="coverage/Project$D3_Hybrid_LR_GBDT.coverage" NAME="D3_Hybrid_LR_GBDT Coverage Results" MODIFIED="1575887025305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
     <SUITE FILE_PATH="coverage/Project$C_Feature_UI.coverage" NAME="C_Feature_UI Coverage Results" MODIFIED="1575633995058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/E_FeatureProject" />
     <SUITE FILE_PATH="coverage/Project$A_Feature_U.coverage" NAME="A_Feature_U Coverage Results" MODIFIED="1575633981382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/E_FeatureProject" />
     <SUITE FILE_PATH="coverage/Project$A_Gen_ItemInfo.coverage" NAME="A_Gen_ItemInfo Coverage Results" MODIFIED="1575632253269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/C_DataForP" />
     <SUITE FILE_PATH="coverage/Project$D_Gen_SaleInfo.coverage" NAME="D_Gen_SaleInfo Coverage Results" MODIFIED="1575632460113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/C_DataForP" />
     <SUITE FILE_PATH="coverage/Project$D_Gen_SubData.coverage" NAME="D_Gen_SubData Coverage Results" MODIFIED="1575629685212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/A_PreHandleData" />
     <SUITE FILE_PATH="coverage/Project$B_SplitSaleInfo.coverage" NAME="B_SplitSaleInfo Coverage Results" MODIFIED="1575633924370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/D_SplitData2Train" />
-    <SUITE FILE_PATH="coverage/Project$C1_selectParameter_LR.coverage" NAME="C1_selectParameter_LR Coverage Results" MODIFIED="1575634570452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
+    <SUITE FILE_PATH="coverage/Project$C1_selectParameter_LR.coverage" NAME="C1_selectParameter_LR Coverage Results" MODIFIED="1575886718313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/F_TrainModel" />
+    <SUITE FILE_PATH="coverage/Project$fTool.coverage" NAME="fTool Coverage Results" MODIFIED="1575786517591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/H_HybridModel" />
   </component>
 </project>

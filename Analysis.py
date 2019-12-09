@@ -12,7 +12,7 @@ def GetData(dataLink):
 def ExcSupervised(line):
     total = line.split(",")
     # 得到用户
-    user = int(total[0])
+    user = 0    # int(total[0])
 
     # 获取真实结果
     y = [int(total[1])]
@@ -29,7 +29,7 @@ class Performance:
     FN = 0          # false negative
     TN = 0          # true negative
 
-    novSum_d = [0, 0, 0]      # nov和
+    novSum_d = [0] * 10      # nov和
     history = {}    # 历史
     N = 0           # 推荐轮数
 
@@ -50,18 +50,16 @@ class Performance:
             stale = 0
             fresh = 0
             for each in y:
-                if each not in y and each in self.history[u]:
+                if each in self.history[u]:
                     stale += 1
-                elif each in y and each not in self.history[u]:
+                else:
                     fresh += 0.3
-            self.novSum_d[0] += (fresh - 0.1 * stale)   # / len(pred)
-            self.novSum_d[1] += (fresh - 0.2 * stale)   # / len(pred)
-            self.novSum_d[2] += (fresh - 0.3 * stale)   # / len(pred)
+            for i in range(10):
+                self.novSum_d[i] += (fresh - (i / 10) * stale)
 
             for each in y:
                 if each not in self.history[u]:
                     self.history[u].append(each)
-
 
     def getPrecision(self):
         return self.TP / (self.TP + self.FP)
@@ -88,9 +86,8 @@ def Main(dataLink):
     print('Precision =', obj.getPrecision())
     print('Recall =', obj.getRecall())
     print('F1 =', obj.getF1())
-    print('Novelty@0.1 =', obj.getNov(1))
-    print('Novelty@0.2 =', obj.getNov(2))
-    print('Novelty@0.3 =', obj.getNov(3))
+    for x in range(1, 8):
+        print('Novelty@0.%d =' % x, obj.getNov(x))
 
 
 def Run():
@@ -100,10 +97,9 @@ def Run():
     Main(DLSet.resGBDT_link[1:])
     print('--------------------------------')
     Main(DLSet.resLRGBDT_link[1:])
+    print('--------------------------------')
+    Main((DLSet.resLinUCB_link[1:] + '_d') % 3)
 
 
 if __name__ == '__main__':
     Run()
-    # p = 0.2700787401574803
-    # r = 0.13165266106442577
-    # print(2 * p * r / (p + r))

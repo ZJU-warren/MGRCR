@@ -1,4 +1,5 @@
-from G_LinUCB.LinUCB_Hybrid_Arm import *
+from H_HybridModel.Hybrid_Arm import *
+from H_HybridModel.fTool import FTool
 import random
 
 
@@ -9,8 +10,8 @@ class LinUCB_hybrid:
     # 模型初始化
     def __init__(self, alpha=2.1):
         # 初始化属性
-        self.alpha = alpha      # 1 + np.sqrt(np.log(2/delta)/2)
-        self.d = 6                         # size of user features
+        self.alpha = alpha                  # 1 + np.sqrt(np.log(2/delta)/2)
+        self.d = 6                          # size of user features
         self.k = self.d * self.d            # size of art features
         self.A0 = np.identity(self.k)       # initialization of env features, Line 1
         self.b0 = np.zeros((self.k, 1))     # Line 2
@@ -26,6 +27,8 @@ class LinUCB_hybrid:
         self.total = 0
         self.IDRecorder = {}
         self.resSet = None
+
+        self.fTool = FTool()
 
     # 增膀臂
     def addArm(self, id, feature):
@@ -43,7 +46,7 @@ class LinUCB_hybrid:
             print('Attempted to remove non-existed arm id', id)
 
     # 选择推荐
-    def recommend(self, user_features, K, trueSet=None):
+    def recommend(self, user_features, K, userID, trueSet=None):
         # load user feature
         # print(np.array(user_features[0][0:self.d]))
         u = np.array(user_features[0][:self.d]).reshape((self.d, 1))
@@ -64,14 +67,16 @@ class LinUCB_hybrid:
                 if x is not None:
                     resSet.append(self.IDRecorder[each])
 
-            for i in range(30):
+            for i in range(5):
                 r = random.randint(0, self.total-1)
                 while r in trueSet:
                     r = random.randint(0, self.total - 1)
                 resSet.append(r)
 
         for each in resSet:
-            bestP.append(self.arms[each].getP(self.A0, self.betaHat, u))
+            z = self.fTool.get(userID, self.arms[each].getID())
+            bestP.append(self.arms[each].getP(self.A0, self.betaHat, u, z))
+
 
         bestP = [each[0][0] for each in bestP]
         self.currentArm = np.argpartition(bestP, -K)[-K:]

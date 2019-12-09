@@ -73,7 +73,7 @@ def Predict(gd, modelLink_gbdt, modelLink_enc, modelLink_lr, thre=0.5):
         f1 = metrics.f1_score(judge_y, judge_y_pred)
         p = metrics.precision_score(judge_y, judge_y_pred)
         r = metrics.recall_score(judge_y, judge_y_pred)
-        print('co = %.2f' % co, '  f1 = %.4f' % f1, '  Precision = %.4f' % p, '  Recall = %.4f' % r)
+        print('co = %.2f' % co, '  f1 = %.4f' % f1, '  Precision = %.6f' % p, '  Recall = %.4f' % r)
 
         f1Set.append(f1)
         coSet.append(co)
@@ -96,11 +96,11 @@ if __name__ == '__main__':
         DLSet.feature_I_judge_link,
         DLSet.feature_UI_judge_link,
     )
-
-    TrainHyBrid(gd, 19, 160,
-                 DLSet.hybrid_classifier_GBDT_link,
-                 DLSet.hybrid_classifier_ENC_link,
-                 DLSet.hybrid_classifier_LR_link)
+    #
+    # TrainHyBrid(gd, 19, 160,
+    #              DLSet.hybrid_classifier_GBDT_link,
+    #              DLSet.hybrid_classifier_ENC_link,
+    #              DLSet.hybrid_classifier_LR_link)
 
     res = Predict(gd,
                   DLSet.hybrid_classifier_GBDT_link,

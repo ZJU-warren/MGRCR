@@ -47,7 +47,7 @@ class LinUCB_disjoint:
                 if x is not None:
                     resSet.append(self.IDRecorder[each])
 
-            for i in range(30):
+            for i in range(100):
                 r = random.randint(0, self.total-1)
                 while r in trueSet:
                     r = random.randint(0, self.total - 1)
